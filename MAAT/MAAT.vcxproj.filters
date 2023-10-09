@@ -34,6 +34,7 @@
     <ClInclude Include="src\MAAT\Log.h">
       <Filter>MAAT</Filter>
     </ClInclude>
+    <ClInclude Include="src\mtpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MAAT\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\MAAT\Log.cpp">
       <Filter>MAAT</Filter>
     </ClCompile>
+    <ClCompile Include="src\mtpch.cpp" />
   </ItemGroup>
 </Project>

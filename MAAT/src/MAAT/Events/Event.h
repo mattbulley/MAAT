@@ -1,9 +1,7 @@
 #pragma once
 
 #include "MAAT/Core.h"
-
-#include <string>
-#include <functional>
+#include "mtpch.h"
 
 namespace MAAT {
 

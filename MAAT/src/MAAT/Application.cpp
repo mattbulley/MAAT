@@ -1,3 +1,4 @@
+#include "mtpch.h"
 #include "Application.h"
 
 #include "MAAT/Events/ApplicationEvent.h"

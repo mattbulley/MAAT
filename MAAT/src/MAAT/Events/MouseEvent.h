@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace MAAT {
 
 	class MAAT_API MouseMovedEvent : public Event

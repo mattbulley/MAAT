@@ -19,6 +19,9 @@ project "MAAT"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "mtpch.h"
+	pchsource "MAAT/src/mtpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
