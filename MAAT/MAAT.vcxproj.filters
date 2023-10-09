@@ -37,6 +37,12 @@
     <ClInclude Include="src\MAAT\Events\MouseEvent.h">
       <Filter>MAAT\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Layer.h">
+      <Filter>MAAT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\LayerStack.h">
+      <Filter>MAAT</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Log.h">
       <Filter>MAAT</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MAAT\Application.cpp">
+      <Filter>MAAT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Layer.cpp">
+      <Filter>MAAT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\LayerStack.cpp">
       <Filter>MAAT</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Log.cpp">
