@@ -4,6 +4,9 @@
     <Filter Include="MAAT">
       <UniqueIdentifier>{E865887C-D49C-890D-7D89-6F10699F050F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MAAT\Events">
+      <UniqueIdentifier>{CC5CA3F3-3812-1CE9-C106-16C02DBB12ED}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MAAT.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\EntryPoint.h">
       <Filter>MAAT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Events\ApplicationEvent.h">
+      <Filter>MAAT\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Events\Event.h">
+      <Filter>MAAT\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Events\KeyEvent.h">
+      <Filter>MAAT\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Events\MouseEvent.h">
+      <Filter>MAAT\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Log.h">
       <Filter>MAAT</Filter>
