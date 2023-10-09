@@ -6,6 +6,7 @@
 #include "MAAT/Layer.h"
 #include "MAAT/Log.h"
 
+#include "MAAT/ImGui/ImGuiLayer.h"
 
 // ---Entry Point---------------------
 #include "MAAT/EntryPoint.h"
