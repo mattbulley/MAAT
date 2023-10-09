@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 --Include directories relative to the root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "MAAT/vendor/GLFW/include"
+IncludeDir["Glad"] = "MAAT/vendor/Glad/include"
 
 include "MAAT/vendor/GLFW"
+include "MAAT/vendor/Glad"
 
 project "MAAT"
 	location "MAAT"
@@ -38,12 +40,14 @@ project "MAAT"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -55,7 +59,8 @@ project "MAAT"
 		defines
 		{
 			"MAAT_PLATFORM_WINDOWS",
-			"MAAT_BUILD_DLL"
+			"MAAT_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
