@@ -11,6 +11,12 @@ workspace "MAAT"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directories relative to the root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "MAAT/vendor/GLFW/include"
+
+include "MAAT/vendor/GLFW"
+
 project "MAAT"
 	location "MAAT"
 	kind "SharedLib"
@@ -31,7 +37,14 @@ project "MAAT"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

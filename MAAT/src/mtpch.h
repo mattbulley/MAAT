@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "MAAT/Log.h"
+
 #ifdef MAAT_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
