@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef MAAT_PLATFORM_WINDOWS
+#if MAAT_DYNAMIC_LINK
 	#ifdef MAAT_BUILD_DLL
 		#define MAAT_API __declspec(dllexport)
 	#else
 		#define MAAT_API __declspec(dllimport)
 	#endif
+#else
+	#define MAAT_API
+#endif
 #else
 	#error MAAT only supports Windows!
 #endif

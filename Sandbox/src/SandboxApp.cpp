@@ -1,5 +1,7 @@
 #include <MAAT.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public MAAT::Layer
 {
 public:
@@ -13,7 +15,15 @@ public:
 		if (MAAT::Input::IsKeyPressed(MAAT_KEY_TAB))
 			MAAT_TRACE("Tab key is pressed (poll)!");
 	}
-
+	
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::ColorEdit4("", new float[4]);
+		ImGui::End();
+	}
+	
 	void OnEvent(MAAT::Event& event) override
 	{
 		if (event.GetEventType() == MAAT::EventType::KeyPressed)

@@ -75,7 +75,7 @@ namespace MAAT {
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
-		io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
+		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
 
 		// Rendering
 		ImGui::Render();
@@ -94,5 +94,8 @@ namespace MAAT {
 	{
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
+
+		//ImGui::Begin("");
+		//ImGui::End();
 	}
 }
