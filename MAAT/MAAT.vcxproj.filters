@@ -49,6 +49,9 @@
     <ClInclude Include="src\MAAT\Input.h">
       <Filter>MAAT</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\KeyCodes.h">
+      <Filter>MAAT</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Layer.h">
       <Filter>MAAT</Filter>
     </ClInclude>
@@ -56,6 +59,9 @@
       <Filter>MAAT</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Log.h">
+      <Filter>MAAT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\MouseButtonCodes.h">
       <Filter>MAAT</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Window.h">

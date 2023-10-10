@@ -159,9 +159,11 @@
     <ClInclude Include="src\MAAT\Events\MouseEvent.h" />
     <ClInclude Include="src\MAAT\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\MAAT\Input.h" />
+    <ClInclude Include="src\MAAT\KeyCodes.h" />
     <ClInclude Include="src\MAAT\Layer.h" />
     <ClInclude Include="src\MAAT\LayerStack.h" />
     <ClInclude Include="src\MAAT\Log.h" />
+    <ClInclude Include="src\MAAT\MouseButtonCodes.h" />
     <ClInclude Include="src\MAAT\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

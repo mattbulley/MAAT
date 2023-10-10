@@ -6,6 +6,10 @@
 #include "MAAT/Layer.h"
 #include "MAAT/Log.h"
 
+#include "MAAT/Input.h"
+#include "MAAT/KeyCodes.h"
+#include "MAAT/MouseButtonCodes.h"
+
 #include "MAAT/ImGui/ImGuiLayer.h"
 
 // ---Entry Point---------------------
