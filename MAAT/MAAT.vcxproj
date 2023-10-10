@@ -158,11 +158,13 @@
     <ClInclude Include="src\MAAT\Events\KeyEvent.h" />
     <ClInclude Include="src\MAAT\Events\MouseEvent.h" />
     <ClInclude Include="src\MAAT\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\MAAT\Input.h" />
     <ClInclude Include="src\MAAT\Layer.h" />
     <ClInclude Include="src\MAAT\LayerStack.h" />
     <ClInclude Include="src\MAAT\Log.h" />
     <ClInclude Include="src\MAAT\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mtpch.h" />
   </ItemGroup>
@@ -173,6 +175,7 @@
     <ClCompile Include="src\MAAT\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mtpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
