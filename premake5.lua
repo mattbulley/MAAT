@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "MAAT/vendor/GLFW/include"
 IncludeDir["Glad"] = "MAAT/vendor/Glad/include"
 IncludeDir["ImGui"] = "MAAT/vendor/imgui"
+IncludeDir["glm"] = "MAAT/vendor/glm"
 
 include "MAAT/vendor/GLFW"
 include "MAAT/vendor/Glad"
@@ -36,7 +37,9 @@ project "MAAT"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -45,7 +48,8 @@ project "MAAT"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -105,6 +109,7 @@ project "Sandbox"
 	includedirs
 	{
 		"MAAT/vendor/spdlog/include",
+		"MAAT/vendor/glm",
 		"MAAT/src"
 	}
 
