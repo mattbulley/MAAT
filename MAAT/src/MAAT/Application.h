@@ -7,6 +7,7 @@
 #include "MAAT/Events/Event.h"
 #include "MAAT/Events/ApplicationEvent.h"
 
+#include "MAAT/ImGui/ImGuiLayer.h"
 
 namespace MAAT {
 
@@ -29,6 +30,7 @@ namespace MAAT {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

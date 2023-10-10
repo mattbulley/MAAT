@@ -165,7 +165,6 @@
     <ClInclude Include="src\MAAT\Log.h" />
     <ClInclude Include="src\MAAT\MouseButtonCodes.h" />
     <ClInclude Include="src\MAAT\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mtpch.h" />
@@ -588,11 +587,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MAAT\Application.cpp" />
+    <ClCompile Include="src\MAAT\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\MAAT\Layer.cpp" />
     <ClCompile Include="src\MAAT\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mtpch.cpp">
