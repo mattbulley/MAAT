@@ -9,6 +9,11 @@
 #else
 	#error MAAT only supports Windows!
 #endif
+/*
+#ifdef MAAT_DEBUG
+	#define MAAT_ENABLE_ASSERTS
+#endif
+*/
 
 #ifdef MAAT_ENABLE_ASSERTS
 	#define MAAT_ASSERT(x, ...) { if(!(x)) { MAAT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
