@@ -155,7 +155,9 @@
     <ClInclude Include="src\MAAT\LayerStack.h" />
     <ClInclude Include="src\MAAT\Log.h" />
     <ClInclude Include="src\MAAT\MouseButtonCodes.h" />
+    <ClInclude Include="src\MAAT\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\MAAT\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mtpch.h" />
@@ -583,6 +585,7 @@
     <ClCompile Include="src\MAAT\Layer.cpp" />
     <ClCompile Include="src\MAAT\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mtpch.cpp">
@@ -603,4 +606,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project>
+</Project> 
