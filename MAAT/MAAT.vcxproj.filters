@@ -96,6 +96,9 @@
     <ClInclude Include="src\MAAT\Renderer\GraphicsContext.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\Shader.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Window.h">
       <Filter>src\MAAT</Filter>
     </ClInclude>
@@ -1378,6 +1381,9 @@
     </ClCompile>
     <ClCompile Include="src\MAAT\Log.cpp">
       <Filter>src\MAAT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\Shader.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
       <Filter>src\Platform\OpenGL</Filter>
