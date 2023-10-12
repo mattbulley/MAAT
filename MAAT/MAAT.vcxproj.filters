@@ -99,6 +99,9 @@
     <ClInclude Include="src\MAAT\Renderer\GraphicsContext.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\OrthographicCamera.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\RenderCommand.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
@@ -1407,6 +1410,9 @@
       <Filter>src\MAAT</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\OrthographicCamera.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\RenderCommandcpp.cpp">

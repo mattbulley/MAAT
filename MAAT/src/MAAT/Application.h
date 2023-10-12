@@ -13,6 +13,8 @@
 #include "MAAT/Renderer/Buffer.h"
 #include "MAAT/Renderer/VertexArray.h"
 
+#include "MAAT/Renderer/OrthographicCamera.h"
+
 namespace MAAT {
 
 	class MAAT_API Application
@@ -43,6 +45,8 @@ namespace MAAT {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};
