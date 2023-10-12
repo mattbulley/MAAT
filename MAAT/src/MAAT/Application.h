@@ -9,15 +9,9 @@
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
-#include "MAAT/Renderer/Shader.h"
-#include "MAAT/Renderer/Buffer.h"
-#include "MAAT/Renderer/VertexArray.h"
-
-#include "MAAT/Renderer/OrthographicCamera.h"
-
 namespace MAAT {
 
-	class MAAT_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -39,14 +33,6 @@ namespace MAAT {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

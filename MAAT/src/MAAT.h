@@ -12,6 +12,17 @@
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
+// ---Renderer------------------------
+#include "MAAT/Renderer/Renderer.h"
+#include "MAAT/Renderer/RenderCommand.h"
+
+#include "MAAT/Renderer/Buffer.h"
+#include "MAAT/Renderer/Shader.h"
+#include "MAAT/Renderer/VertexArray.h"
+
+#include "MAAT/Renderer/OrthographicCamera.h"
+// -----------------------------------
+
 // ---Entry Point---------------------
 #include "MAAT/EntryPoint.h"
 // -----------------------------------
