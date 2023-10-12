@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MAAT/Core.h"
+#include "MAAT/Core/Timestep.h"
 #include "MAAT/Events/Event.h"
 
 namespace MAAT {
@@ -13,7 +14,7 @@ namespace MAAT {
 
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
-		virtual void OnUpdate() {}
+		virtual void OnUpdate(Timestep ts) {}
 		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 

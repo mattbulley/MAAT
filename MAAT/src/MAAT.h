@@ -6,6 +6,8 @@
 #include "MAAT/Layer.h"
 #include "MAAT/Log.h"
 
+#include "MAAT/Core/Timestep.h"
+
 #include "MAAT/Input.h"
 #include "MAAT/KeyCodes.h"
 #include "MAAT/MouseButtonCodes.h"

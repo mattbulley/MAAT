@@ -7,6 +7,9 @@
     <Filter Include="src\MAAT">
       <UniqueIdentifier>{5F8521CF-4B52-7CDA-746B-6A826097B168}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MAAT\Core">
+      <UniqueIdentifier>{17DDEF8A-839D-6BC1-4CD8-B43EB857B09D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\MAAT\Events">
       <UniqueIdentifier>{63907D0B-CF1B-EBCF-D82C-6EC4443747D0}</UniqueIdentifier>
     </Filter>
@@ -56,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\Core.h">
       <Filter>src\MAAT</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Core\Timestep.h">
+      <Filter>src\MAAT\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\EntryPoint.h">
       <Filter>src\MAAT</Filter>

@@ -7,6 +7,8 @@
 #include "MAAT/Events/Event.h"
 #include "MAAT/Events/ApplicationEvent.h"
 
+#include "MAAT/Core/Timestep.h"
+
 #include "MAAT/ImGui/ImGuiLayer.h"
 
 namespace MAAT {
@@ -29,10 +31,12 @@ namespace MAAT {
 		inline static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};

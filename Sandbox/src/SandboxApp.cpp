@@ -119,22 +119,22 @@ public:
 		m_BlueShader.reset(new MAAT::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(MAAT::Timestep ts) override
 	{
 		if (MAAT::Input::IsKeyPressed(MAAT_KEY_LEFT))
-			m_CameraPosition.x -= m_CameraMoveSpeed;
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
 		else if (MAAT::Input::IsKeyPressed(MAAT_KEY_RIGHT))
-			m_CameraPosition.x += m_CameraMoveSpeed;
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
 
 		if (MAAT::Input::IsKeyPressed(MAAT_KEY_UP))
-			m_CameraPosition.y += m_CameraMoveSpeed;
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
 		else if (MAAT::Input::IsKeyPressed(MAAT_KEY_DOWN))
-			m_CameraPosition.y -= m_CameraMoveSpeed;
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
 
 		if (MAAT::Input::IsKeyPressed(MAAT_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed;
+			m_CameraRotation += m_CameraRotationSpeed * ts;
 		if (MAAT::Input::IsKeyPressed(MAAT_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed;
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
 		MAAT::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		MAAT::RenderCommand::Clear();
@@ -167,10 +167,10 @@ private:
 
 	MAAT::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 0.05f;
+	float m_CameraMoveSpeed = 2.0f;
 
 	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 2.0f;
+	float m_CameraRotationSpeed = 100.0f;
 };
 
 class Sandbox : public MAAT::Application
