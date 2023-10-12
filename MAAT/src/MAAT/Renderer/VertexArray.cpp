@@ -10,8 +10,8 @@ namespace MAAT {
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None:    MAAT_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-		case RendererAPI::OpenGL:  return new OpenGLVertexArray();
+		case RendererAPI::API::None:    MAAT_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
+		case RendererAPI::API::OpenGL:  return new OpenGLVertexArray();
 		}
 
 		MAAT_CORE_ASSERT(false, "Unknown RendererAPI!");

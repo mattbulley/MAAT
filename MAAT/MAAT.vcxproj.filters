@@ -99,7 +99,13 @@
     <ClInclude Include="src\MAAT\Renderer\GraphicsContext.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\RenderCommand.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Renderer.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\RendererAPI.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Shader.h">
@@ -115,6 +121,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
@@ -1400,7 +1409,13 @@
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\RenderCommandcpp.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Renderer.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\RendererAPI.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Shader.cpp">
@@ -1413,6 +1428,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
