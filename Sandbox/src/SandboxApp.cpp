@@ -21,7 +21,7 @@ public:
 			0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<MAAT::VertexBuffer> vertexBuffer;
+		MAAT::Ref<MAAT::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(MAAT::VertexBuffer::Create(vertices, sizeof(vertices)));
 		MAAT::BufferLayout layout = {
 			{ MAAT::ShaderDataType::Float3, "a_Position" },
@@ -31,7 +31,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<MAAT::IndexBuffer> indexBuffer;
+		MAAT::Ref<MAAT::IndexBuffer> indexBuffer;
 		indexBuffer.reset(MAAT::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -44,7 +44,7 @@ public:
 			-0.5f,  0.5f, 0.0f,
 		};
 
-		std::shared_ptr<MAAT::VertexBuffer> squareVB;
+		MAAT::Ref<MAAT::VertexBuffer> squareVB;
 		squareVB.reset(MAAT::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ MAAT::ShaderDataType::Float3, "a_Position" }
@@ -52,7 +52,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<MAAT::IndexBuffer> squareIB;
+		MAAT::Ref<MAAT::IndexBuffer> squareIB;
 		squareIB.reset(MAAT::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -186,11 +186,11 @@ public:
 	{
 	}
 private:
-	std::shared_ptr<MAAT::Shader> m_Shader;
-	std::shared_ptr<MAAT::VertexArray> m_VertexArray;
+	MAAT::Ref<MAAT::Shader> m_Shader;
+	MAAT::Ref<MAAT::VertexArray> m_VertexArray;
 
-	std::shared_ptr<MAAT::Shader> m_FlatColorShader;
-	std::shared_ptr<MAAT::VertexArray> m_SquareVA;
+	MAAT::Ref<MAAT::Shader> m_FlatColorShader;
+	MAAT::Ref<MAAT::VertexArray> m_SquareVA;
 
 	MAAT::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;

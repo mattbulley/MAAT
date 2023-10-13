@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #ifdef MAAT_PLATFORM_WINDOWS
 #if MAAT_DYNAMIC_LINK
 	#ifdef MAAT_BUILD_DLL
@@ -30,3 +32,12 @@
 #define BIT(x) (1 << x)
 
 #define MAAT_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+
+namespace MAAT {
+
+	template<typename T>
+	using Scope = std::unique_ptr<T>;
+
+	template<typename T>
+	using Ref = std::shared_ptr<T>;
+}
