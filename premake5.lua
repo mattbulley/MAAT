@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "MAAT/vendor/GLFW/include"
 IncludeDir["Glad"] = "MAAT/vendor/Glad/include"
 IncludeDir["ImGui"] = "MAAT/vendor/imgui"
 IncludeDir["glm"] = "MAAT/vendor/glm"
+IncludeDir["stb_image"] = "MAAT/vendor/stb_image"
 
 include "MAAT/vendor/GLFW"
 include "MAAT/vendor/Glad"
@@ -39,6 +40,8 @@ project "MAAT"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
@@ -55,7 +58,8 @@ project "MAAT"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links
