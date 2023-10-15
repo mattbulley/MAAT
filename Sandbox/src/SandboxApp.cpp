@@ -164,6 +164,7 @@ public:
 		m_TextureShader.reset(MAAT::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
 		m_Texture = MAAT::Texture2D::Create("assets/textures/alien.png");
+		m_MaatLogoTexture = MAAT::Texture2D::Create("assets/textures/logo.png");
 
 		std::dynamic_pointer_cast<MAAT::OpenGLShader>(m_TextureShader)->Bind();
 		std::dynamic_pointer_cast<MAAT::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
@@ -213,6 +214,8 @@ public:
 		
 		m_Texture->Bind();
 		MAAT::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		m_MaatLogoTexture->Bind();
+		MAAT::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		// Triangle
 		// MAAT::Renderer::Submit(m_Shader, m_VertexArray);
@@ -237,7 +240,7 @@ private:
 	MAAT::Ref<MAAT::Shader> m_FlatColorShader, m_TextureShader;
 	MAAT::Ref<MAAT::VertexArray> m_SquareVA;
 
-	MAAT::Ref<MAAT::Texture2D> m_Texture;
+	MAAT::Ref<MAAT::Texture2D> m_Texture, m_MaatLogoTexture;
 
 	MAAT::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
