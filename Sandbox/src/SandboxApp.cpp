@@ -92,7 +92,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(MAAT::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = MAAT::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
@@ -126,15 +126,15 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(MAAT::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader = MAAT::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(MAAT::Shader::Create("assets/shaders/Texture.glsl"));
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = MAAT::Texture2D::Create("assets/textures/alien.png");
 		m_MaatLogoTexture = MAAT::Texture2D::Create("assets/textures/logo.png");
 
-		std::dynamic_pointer_cast<MAAT::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<MAAT::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<MAAT::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<MAAT::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 	void OnUpdate(MAAT::Timestep ts) override
@@ -178,11 +178,13 @@ public:
 				MAAT::Renderer::Submit(m_FlatColorShader, m_SquareVA, transform);
 			}
 		}
+
+		auto textureShader = m_ShaderLibrary.Get("Texture");
 		
 		m_Texture->Bind();
-		MAAT::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		MAAT::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 		m_MaatLogoTexture->Bind();
-		MAAT::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		MAAT::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		// Triangle
 		// MAAT::Renderer::Submit(m_Shader, m_VertexArray);
@@ -201,10 +203,11 @@ public:
 	{
 	}
 private:
+	MAAT::ShaderLibrary m_ShaderLibrary;
 	MAAT::Ref<MAAT::Shader> m_Shader;
 	MAAT::Ref<MAAT::VertexArray> m_VertexArray;
 
-	MAAT::Ref<MAAT::Shader> m_FlatColorShader, m_TextureShader;
+	MAAT::Ref<MAAT::Shader> m_FlatColorShader;
 	MAAT::Ref<MAAT::VertexArray> m_SquareVA;
 
 	MAAT::Ref<MAAT::Texture2D> m_Texture, m_MaatLogoTexture;
