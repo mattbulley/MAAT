@@ -26,7 +26,3 @@
 
 #include "MAAT/Renderer/OrthographicCamera.h"
 // -----------------------------------
-
-// ---Entry Point---------------------
-#include "MAAT/Core/EntryPoint.h"
-// -----------------------------------
