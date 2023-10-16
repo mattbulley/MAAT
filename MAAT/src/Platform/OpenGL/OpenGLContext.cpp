@@ -23,6 +23,15 @@ namespace MAAT {
 		MAAT_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
 		MAAT_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
 		MAAT_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
+
+	#ifdef MAAT_ENABLE_ASSERTS
+			int versionMajor;
+			int versionMinor;
+			glGetIntegerv(GL_MAJOR_VERSION, &versionMajor);
+			glGetIntegerv(GL_MINOR_VERSION, &versionMinor);
+
+			MAAT_CORE_ASSERT(versionMajor > 4 || (versionMajor == 4 && versionMinor >= 5), "MAAT requires at least OpenGL version 4.5!");
+	#endif
 	}
 
 	void OpenGLContext::SwapBuffers()

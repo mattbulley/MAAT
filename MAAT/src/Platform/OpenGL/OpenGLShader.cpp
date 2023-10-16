@@ -77,7 +77,7 @@ namespace MAAT {
 		while (pos != std::string::npos)
 		{
 			size_t eol = source.find_first_of("\r\n", pos);
-			MAAT_CORE_ASSERT(eol != std::stromg::npos, "Syntax error");
+			MAAT_CORE_ASSERT(eol != std::string::npos, "Syntax error");
 			size_t begin = pos + typeTokenLength + 1;
 			std::string type = source.substr(begin, eol - begin);
 			MAAT_CORE_ASSERT(ShaderTypeFromString(type), "Invalid shader type specified");
@@ -93,7 +93,7 @@ namespace MAAT {
 	void OpenGLShader::Compile(const std::unordered_map<GLenum, std::string>& shaderSources)
 	{
 		GLuint program = glCreateProgram();
-		MAAT_CORE_ASSERT(shaderSources.size <= 2, "We only support 2 shaders for now!");
+		MAAT_CORE_ASSERT(shaderSources.size() <= 2, "We only support 2 shaders for now!");
 		std::array<GLenum, 2> glShaderIDs;
 		int glShaderIDIndex = 0;
 		for (auto& kv : shaderSources)
@@ -121,7 +121,7 @@ namespace MAAT {
 				glDeleteShader(shader);
 
 				MAAT_CORE_ERROR("{0}", infoLog.data());
-				MAAT_CORE_ASSERT(flase, "Shader compilation failure!");
+				MAAT_CORE_ASSERT(false, "Shader compilation failure!");
 				break;
 			}
 
@@ -147,7 +147,7 @@ namespace MAAT {
 				glDeleteProgram(program);
 
 			MAAT_CORE_ERROR("{0}", infoLog.data());
-			MAAT_CORE_ASSERT(flase, "Shader link failure!");
+			MAAT_CORE_ASSERT(false, "Shader link failure!");
 			return;
 		}
 
