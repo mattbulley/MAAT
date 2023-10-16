@@ -17,6 +17,7 @@
 
 // ---Renderer------------------------
 #include "MAAT/Renderer/Renderer.h"
+#include "MAAT/Renderer/Renderer2D.h"
 #include "MAAT/Renderer/RenderCommand.h"
 
 #include "MAAT/Renderer/Buffer.h"

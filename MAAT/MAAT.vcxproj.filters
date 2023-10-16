@@ -123,6 +123,9 @@
     <ClInclude Include="src\MAAT\Renderer\Renderer.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\Renderer2D.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\RendererAPI.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
@@ -1446,6 +1449,9 @@
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Renderer.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\Renderer2D.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\RendererAPI.cpp">
