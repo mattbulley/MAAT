@@ -42,7 +42,7 @@ namespace MAAT {
 	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<MouseScrolledEvent>(MAAT_BIND_EVENT_FN(OrthographicCameraController::OnMouseScrolled));
-		//dispatcher.Dispatch<WindowResizeEvent>(MAAT_BIND_EVENT_FN(OrthographicCameraController::OnMouseScrolled));
+		dispatcher.Dispatch<WindowResizeEvent>(MAAT_BIND_EVENT_FN(OrthographicCameraController::OnWindowResized));
 	}
 
 	bool OrthographicCameraController::OnMouseScrolled(MouseScrolledEvent& e)
