@@ -102,6 +102,9 @@
     <ClInclude Include="src\MAAT\MouseButtonCodes.h">
       <Filter>src\MAAT</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\OrthographicCameraController.h">
+      <Filter>src\MAAT</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Buffer.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
@@ -1428,6 +1431,9 @@
       <Filter>src\MAAT</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Log.cpp">
+      <Filter>src\MAAT</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\OrthographicCameraController.cpp">
       <Filter>src\MAAT</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">

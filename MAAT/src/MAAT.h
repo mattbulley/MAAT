@@ -11,6 +11,7 @@
 #include "MAAT/Input.h"
 #include "MAAT/KeyCodes.h"
 #include "MAAT/MouseButtonCodes.h"
+#include "MAAT/OrthographicCameraController.h"
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
