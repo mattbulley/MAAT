@@ -3,7 +3,7 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "MAAT/LayerStack.h"
+#include "MAAT/Core/LayerStack.h"
 #include "MAAT/Events/Event.h"
 #include "MAAT/Events/ApplicationEvent.h"
 

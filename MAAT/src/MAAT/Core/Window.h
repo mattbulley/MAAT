@@ -2,7 +2,7 @@
 
 #include "mtpch.h"
 
-#include "MAAT/Core.h"
+#include "MAAT/Core/Core.h"
 #include "MAAT/Events/Event.h"
 
 namespace MAAT {

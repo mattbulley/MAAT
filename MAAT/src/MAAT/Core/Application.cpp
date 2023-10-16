@@ -1,7 +1,7 @@
 #include "mtpch.h"
 #include "Application.h"
 
-#include "MAAT/Log.h"
+#include "MAAT/Core/Log.h"
 
 #include "MAAT/Renderer/Renderer.h"
 

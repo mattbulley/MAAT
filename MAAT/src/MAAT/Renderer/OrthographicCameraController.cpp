@@ -1,8 +1,8 @@
 #include "mtpch.h"
 #include "OrthographicCameraController.h"
 
-#include "MAAT/Input.h"
-#include "MAAT/KeyCodes.h"
+#include "MAAT/Core/Input.h"
+#include "MAAT/Core/KeyCodes.h"
 
 namespace MAAT {
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MAAT/Core.h"
+#include "MAAT/Core/Core.h"
 #include "Layer.h"
 
 #include <vector>

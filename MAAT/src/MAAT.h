@@ -2,16 +2,16 @@
 
 // For use by MAAT applications
 
-#include "MAAT/Application.h"
-#include "MAAT/Layer.h"
-#include "MAAT/Log.h"
+#include "MAAT/Core/Application.h"
+#include "MAAT/Core/Layer.h"
+#include "MAAT/Core/Log.h"
 
 #include "MAAT/Core/Timestep.h"
 
-#include "MAAT/Input.h"
-#include "MAAT/KeyCodes.h"
-#include "MAAT/MouseButtonCodes.h"
-#include "MAAT/OrthographicCameraController.h"
+#include "MAAT/Core/Input.h"
+#include "MAAT/Core/KeyCodes.h"
+#include "MAAT/Core/MouseButtonCodes.h"
+#include "MAAT/Renderer/OrthographicCameraController.h"
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
@@ -28,5 +28,5 @@
 // -----------------------------------
 
 // ---Entry Point---------------------
-#include "MAAT/EntryPoint.h"
+#include "MAAT/Core/EntryPoint.h"
 // -----------------------------------

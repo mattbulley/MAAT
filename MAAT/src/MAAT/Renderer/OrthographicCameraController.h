@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Renderer/OrthographicCamera.h"
+#include "MAAT/Renderer/OrthographicCamera.h"
 #include "MAAT/Core/Timestep.h"
 
 #include "MAAT/Events/ApplicationEvent.h"

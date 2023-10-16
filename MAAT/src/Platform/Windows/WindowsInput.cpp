@@ -1,7 +1,7 @@
 #include "mtpch.h"
 #include "WindowsInput.h"
 
-#include "MAAT/Application.h"
+#include "MAAT/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace MAAT {

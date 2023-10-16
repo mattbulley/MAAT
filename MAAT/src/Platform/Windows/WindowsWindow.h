@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MAAT/Window.h"
+#include "MAAT/Core/Window.h"
 #include "MAAT/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

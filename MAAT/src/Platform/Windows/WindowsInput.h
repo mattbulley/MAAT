@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MAAT/Input.h"
+#include "MAAT/Core/Input.h"
 
 namespace MAAT {
 
