@@ -15,6 +15,8 @@ namespace MAAT {
 
 	void OpenGLContext::Init()
 	{
+		MAAT_PROFILE_FUNCTION();
+
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		MAAT_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -36,6 +38,8 @@ namespace MAAT {
 
 	void OpenGLContext::SwapBuffers()
 	{
+		MAAT_PROFILE_FUNCTION();
+
 		glfwSwapBuffers(m_WindowHandle);
 	}
 }

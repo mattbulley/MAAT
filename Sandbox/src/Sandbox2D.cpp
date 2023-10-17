@@ -11,11 +11,14 @@ Sandbox2D::Sandbox2D()
 
 void Sandbox2D::OnAttach()
 {
+	MAAT_PROFILE_FUNCTION();
+
 	m_AlienTexture = MAAT::Texture2D::Create("assets/textures/alien.png");
 }
 
 void Sandbox2D::OnDetach()
 {
+	MAAT_PROFILE_FUNCTION();
 }
 
 void Sandbox2D::OnUpdate(MAAT::Timestep ts)
@@ -23,20 +26,18 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 	MAAT_PROFILE_FUNCTION();
 
 	// Update
-	{
-		MAAT_PROFILE_SCOPE();
-		m_CameraController.OnUpdate(ts);
-	}
+	
+	m_CameraController.OnUpdate(ts);
 
 	// Render
 	{
-		MAAT_PROFILE_SCOPE();
+		MAAT_PROFILE_SCOPE("Renderer Prep");
 		MAAT::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		MAAT::RenderCommand::Clear();
 	}
 
 	{
-		MAAT_PROFILE_SCOPE();
+		MAAT_PROFILE_SCOPE("Renderer Draw");
 		MAAT::Renderer2D::BeginScene(m_CameraController.GetCamera());
 		MAAT::Renderer2D::DrawQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
 		MAAT::Renderer2D::DrawQuad({ 0.5f, -0.5f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });

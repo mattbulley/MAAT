@@ -10,6 +10,8 @@ namespace MAAT {
 
 	void Renderer::Init()
 	{
+		MAAT_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}
