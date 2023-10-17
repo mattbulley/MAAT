@@ -10,6 +10,9 @@
     <Filter Include="src\MAAT\Core">
       <UniqueIdentifier>{17DDEF8A-839D-6BC1-4CD8-B43EB857B09D}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MAAT\Debug">
+      <UniqueIdentifier>{15DBF7E8-01A9-EBEE-EA3C-5C15D6A9C753}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\MAAT\Events">
       <UniqueIdentifier>{63907D0B-CF1B-EBCF-D82C-6EC4443747D0}</UniqueIdentifier>
     </Filter>
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\Core\Window.h">
       <Filter>src\MAAT\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Debug\Instrumentor.h">
+      <Filter>src\MAAT\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Events\ApplicationEvent.h">
       <Filter>src\MAAT\Events</Filter>

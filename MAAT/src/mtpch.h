@@ -15,6 +15,8 @@
 
 #include "MAAT/Core/Log.h"
 
+#include "MAAT/Debug/Instrumentor.h"
+
 #ifdef MAAT_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
