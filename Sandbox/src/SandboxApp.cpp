@@ -24,8 +24,7 @@ public:
 			0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		MAAT::Ref<MAAT::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(MAAT::VertexBuffer::Create(vertices, sizeof(vertices)));
+		MAAT::Ref<MAAT::VertexBuffer> vertexBuffer = MAAT::VertexBuffer::Create(vertices, sizeof(vertices));
 		MAAT::BufferLayout layout = {
 			{ MAAT::ShaderDataType::Float3, "a_Position" },
 		{ MAAT::ShaderDataType::Float4, "a_Color" }
@@ -34,8 +33,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		MAAT::Ref<MAAT::IndexBuffer> indexBuffer;
-		indexBuffer.reset(MAAT::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		MAAT::Ref<MAAT::IndexBuffer> indexBuffer = MAAT::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA = MAAT::VertexArray::Create();
@@ -47,8 +45,7 @@ public:
 			-0.5f,  0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		MAAT::Ref<MAAT::VertexBuffer> squareVB;
-		squareVB.reset(MAAT::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		MAAT::Ref<MAAT::VertexBuffer> squareVB = MAAT::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 		squareVB->SetLayout({
 			{ MAAT::ShaderDataType::Float3, "a_Position" },
 			{ MAAT::ShaderDataType::Float2, "a_TexCoord" }
@@ -56,8 +53,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		MAAT::Ref<MAAT::IndexBuffer> squareIB;
-		squareIB.reset(MAAT::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		MAAT::Ref<MAAT::IndexBuffer> squareIB = MAAT::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string vertexSrc = R"(
