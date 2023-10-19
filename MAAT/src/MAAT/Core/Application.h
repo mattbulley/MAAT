@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Core.h"
+#include "MAAT/Core/Core.h"
 
-#include "Window.h"
+#include "MAAT/Core/Window.h"
 #include "MAAT/Core/LayerStack.h"
 #include "MAAT/Events/Event.h"
 #include "MAAT/Events/ApplicationEvent.h"
@@ -11,6 +11,8 @@
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
+int main(int argc, char** argv);
+
 namespace MAAT {
 
 	class Application
@@ -18,8 +20,6 @@ namespace MAAT {
 	public:
 		Application();
 		virtual ~Application();
-
-		void Run();
 
 		void OnEvent(Event& e);
 
@@ -30,6 +30,7 @@ namespace MAAT {
 
 		inline static Application& Get() { return *s_Instance; }
 	private:
+		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 	private:
@@ -41,6 +42,7 @@ namespace MAAT {
 		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
+		friend int ::main(int argc, char** argv);
 	};
 
 	// To be define in CLIENT

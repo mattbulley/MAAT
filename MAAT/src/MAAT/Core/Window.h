@@ -14,20 +14,20 @@ namespace MAAT {
 		unsigned int Height;
 
 		WindowProps(const std::string& title = "MAAT Engine",
-			unsigned int width = 1280,
-			unsigned int height = 720)
+					unsigned int width = 1280,
+					unsigned int height = 720)
 			: Title(title), Width(width), Height(height)
 		{
 		}
 	};
 
 	// Interface representing a desktop system based window
-	class MAAT_API Window
+	class Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 
-		virtual ~Window() {}
+		virtual ~Window() = default;
 
 		virtual void OnUpdate() = 0;
 
@@ -41,6 +41,6 @@ namespace MAAT {
 
 		virtual void* GetNativeWindow() const = 0;
 
-		static Window* Create(const WindowProps& props = WindowProps());
+		static Scope<Window> Create(const WindowProps& props = WindowProps());
 	};
 }

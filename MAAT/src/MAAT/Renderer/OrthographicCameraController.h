@@ -8,7 +8,6 @@
 
 namespace MAAT {
 
-
 	class OrthographicCameraController
 	{
 	public:

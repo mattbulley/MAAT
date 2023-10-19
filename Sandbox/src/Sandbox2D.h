@@ -10,6 +10,7 @@ public:
 
 	virtual void OnAttach() override;
 	virtual void OnDetach() override;
+
 	void OnUpdate(MAAT::Timestep ts) override;
 	virtual void OnImGuiRender() override;
 	void OnEvent(MAAT::Event& e) override;

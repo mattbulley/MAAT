@@ -1,5 +1,5 @@
 #include "mtpch.h"
-#include "OpenGLVertexArray.h"
+#include "Platform/OpenGL/OpenGLVertexArray.h"
 
 #include <glad/glad.h>
 
@@ -9,17 +9,17 @@ namespace MAAT {
 	{
 		switch (type)
 		{
-			case MAAT::ShaderDataType::Float:     return GL_FLOAT;
-			case MAAT::ShaderDataType::Float2:    return GL_FLOAT;
-			case MAAT::ShaderDataType::Float3:    return GL_FLOAT;
-			case MAAT::ShaderDataType::Float4:    return GL_FLOAT;
-			case MAAT::ShaderDataType::Mat3:      return GL_FLOAT;
-			case MAAT::ShaderDataType::Mat4:      return GL_FLOAT;
-			case MAAT::ShaderDataType::Int:       return GL_INT;
-			case MAAT::ShaderDataType::Int2:      return GL_INT;
-			case MAAT::ShaderDataType::Int3:      return GL_INT;
-			case MAAT::ShaderDataType::Int4:      return GL_INT;
-			case MAAT::ShaderDataType::Bool:      return GL_BOOL;
+			case ShaderDataType::Float:    return GL_FLOAT;
+			case ShaderDataType::Float2:   return GL_FLOAT;
+			case ShaderDataType::Float3:   return GL_FLOAT;
+			case ShaderDataType::Float4:   return GL_FLOAT;
+			case ShaderDataType::Mat3:     return GL_FLOAT;
+			case ShaderDataType::Mat4:     return GL_FLOAT;
+			case ShaderDataType::Int:      return GL_INT;
+			case ShaderDataType::Int2:     return GL_INT;
+			case ShaderDataType::Int3:     return GL_INT;
+			case ShaderDataType::Int4:     return GL_INT;
+			case ShaderDataType::Bool:     return GL_BOOL;
 		}
 
 		MAAT_CORE_ASSERT(false, "Unknown ShaderDataType!");
@@ -63,7 +63,6 @@ namespace MAAT {
 		glBindVertexArray(m_RendererID);
 		vertexBuffer->Bind();
 
-		//uint32_t index = 0;
 		const auto& layout = vertexBuffer->GetLayout();
 		for (const auto& element : layout)
 		{

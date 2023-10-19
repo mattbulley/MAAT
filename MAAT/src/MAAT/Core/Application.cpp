@@ -1,17 +1,15 @@
 #include "mtpch.h"
-#include "Application.h"
+#include "MAAT/Core/Application.h"
 
 #include "MAAT/Core/Log.h"
 
 #include "MAAT/Renderer/Renderer.h"
 
-#include "Input.h"
+#include "MAAT/Core/Input.h"
 
 #include <glfw/glfw3.h>
 
 namespace MAAT {
-
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
 	Application* Application::s_Instance = nullptr;
 
@@ -21,8 +19,8 @@ namespace MAAT {
 
 		MAAT_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
-		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window = Window::Create();
+		m_Window->SetEventCallback(MAAT_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
 
@@ -33,6 +31,8 @@ namespace MAAT {
 	Application::~Application()
 	{
 		MAAT_PROFILE_FUNCTION();
+
+		Renderer::Shutdown();
 	}
 
 	void Application::PushLayer(Layer* layer)
@@ -56,14 +56,12 @@ namespace MAAT {
 		MAAT_PROFILE_FUNCTION();
 
 		EventDispatcher dispatcher(e);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
+		dispatcher.Dispatch<WindowCloseEvent>(MAAT_BIND_EVENT_FN(Application::OnWindowClose));
+		dispatcher.Dispatch<WindowResizeEvent>(MAAT_BIND_EVENT_FN(Application::OnWindowResize));
 
-		//MAAT_CORE_TRACE("{0}", e);
-
-		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
 		{
-			(*--it)->OnEvent(e);
+			(*it)->OnEvent(e);
 			if (e.Handled)
 				break;
 		}
@@ -77,7 +75,7 @@ namespace MAAT {
 		{
 			MAAT_PROFILE_SCOPE("RunLoop");
 
-			float time = (float)glfwGetTime(); // Platform::GetTime
+			float time = (float)glfwGetTime();
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 

@@ -1,9 +1,9 @@
 #pragma once
 
-#include "RenderCommand.h"
+#include "MAAT/Renderer/RenderCommand.h"
 
-#include "OrthographicCamera.h"
-#include "Shader.h"
+#include "MAAT/Renderer/OrthographicCamera.h"
+#include "MAAT/Renderer/Shader.h"
 
 namespace MAAT {
 
@@ -11,6 +11,8 @@ namespace MAAT {
 	{
 	public:
 		static void Init();
+		static void Shutdown();
+
 		static void OnWindowResize(uint32_t width, uint32_t height);
 
 		static void BeginScene(OrthographicCamera& camera);
@@ -25,6 +27,6 @@ namespace MAAT {
 			glm::mat4 ViewProjectionMatrix;
 		};
 
-		static SceneData* m_SceneData;
+		static Scope<SceneData> s_SceneData;
 	};
 }

@@ -28,8 +28,8 @@ namespace MAAT {
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
 	private:
-		GLFWwindow * m_Window;
-		GraphicsContext* m_Context;
+		GLFWwindow* m_Window;
+		Scope<GraphicsContext> m_Context;
 
 		struct WindowData
 		{

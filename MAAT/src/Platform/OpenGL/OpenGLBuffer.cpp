@@ -1,13 +1,13 @@
 #include "mtpch.h"
-#include "OpenGLBuffer.h"
+#include "Platform/OpenGL/OpenGLBuffer.h"
 
 #include <glad/glad.h>
 
 namespace MAAT {
 
-	//////////////////////////////////////////////////////
-	// VertexBuffer //////////////////////////////////////
-	//////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////
+	// VertexBuffer /////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////
 
 	OpenGLVertexBuffer::OpenGLVertexBuffer(uint32_t size)
 	{
@@ -43,6 +43,8 @@ namespace MAAT {
 
 	void OpenGLVertexBuffer::Unbind() const
 	{
+		MAAT_PROFILE_FUNCTION();
+
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
@@ -52,9 +54,9 @@ namespace MAAT {
 		glBufferSubData(GL_ARRAY_BUFFER, 0, size, data);
 	}
 
-	//////////////////////////////////////////////////////
-	// IndexBuffer ///////////////////////////////////////
-	//////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////
+	// IndexBuffer //////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////////////
 
 	OpenGLIndexBuffer::OpenGLIndexBuffer(uint32_t* indices, uint32_t count)
 		: m_Count(count)
@@ -62,8 +64,8 @@ namespace MAAT {
 		MAAT_PROFILE_FUNCTION();
 
 		glCreateBuffers(1, &m_RendererID);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_RendererID);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(uint32_t), indices, GL_STATIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, m_RendererID); // GL_ELEMENT_ARRAY_BUFFER before
+		glBufferData(GL_ARRAY_BUFFER, count * sizeof(uint32_t), indices, GL_STATIC_DRAW);
 	}
 	
 	OpenGLIndexBuffer::~OpenGLIndexBuffer()

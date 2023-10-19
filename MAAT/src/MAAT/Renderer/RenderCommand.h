@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RendererAPI.h"
+#include "MAAT/Renderer/RendererAPI.h"
 
 namespace MAAT {
 
@@ -32,6 +32,6 @@ namespace MAAT {
 			s_RendererAPI->DrawIndexed(vertexArray, count);
 		}
 	private:
-		static RendererAPI * s_RendererAPI;
+		static Scope<RendererAPI> s_RendererAPI;
 	};
 }

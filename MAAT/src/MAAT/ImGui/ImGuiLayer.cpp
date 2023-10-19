@@ -1,9 +1,9 @@
 #include "mtpch.h"
-#include "ImGuiLayer.h"
+#include "MAAT/ImGui/ImGuiLayer.h"
 
-#include "imgui.h"
-#include "backends/imgui_impl_glfw.h"
-#include "backends/imgui_impl_opengl3.h"
+#include <imgui.h>
+#include <backends/imgui_impl_glfw.h>
+#include <backends/imgui_impl_opengl3.h>
 
 #include "MAAT/Core/Application.h"
 
@@ -17,12 +17,6 @@ namespace MAAT {
 		: Layer("ImGuiLayer")
 	{
 	}
-
-	ImGuiLayer::~ImGuiLayer()
-	{
-	}
-
-	
 
 	void ImGuiLayer::OnAttach()
 	{

@@ -149,7 +149,7 @@
     <ClInclude Include="src\MAAT\Core\Layer.h" />
     <ClInclude Include="src\MAAT\Core\LayerStack.h" />
     <ClInclude Include="src\MAAT\Core\Log.h" />
-    <ClInclude Include="src\MAAT\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\MAAT\Core\MouseCodes.h" />
     <ClInclude Include="src\MAAT\Core\Timestep.h" />
     <ClInclude Include="src\MAAT\Core\Window.h" />
     <ClInclude Include="src\MAAT\Debug\Instrumentor.h" />
@@ -598,15 +598,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MAAT\Core\Application.cpp" />
+    <ClCompile Include="src\MAAT\Core\Input.cpp" />
     <ClCompile Include="src\MAAT\Core\Layer.cpp" />
     <ClCompile Include="src\MAAT\Core\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Core\Log.cpp" />
+    <ClCompile Include="src\MAAT\Core\Window.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\MAAT\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\MAAT\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\MAAT\Renderer\OrthographicCameraController.cpp" />
-    <ClCompile Include="src\MAAT\Renderer\RenderCommandcpp.cpp" />
+    <ClCompile Include="src\MAAT\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\MAAT\Renderer\Renderer.cpp" />
     <ClCompile Include="src\MAAT\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\MAAT\Renderer\RendererAPI.cpp" />

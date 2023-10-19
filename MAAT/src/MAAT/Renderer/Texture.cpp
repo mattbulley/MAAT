@@ -1,7 +1,7 @@
 #include "mtpch.h"
-#include "Texture.h"
+#include "MAAT/Renderer/Texture.h"
 
-#include "Renderer.h"
+#include "MAAT/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 namespace MAAT {

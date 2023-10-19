@@ -1,5 +1,5 @@
 #include "mtpch.h"
-#include "OrthographicCameraController.h"
+#include "MAAT/Renderer/OrthographicCameraController.h"
 
 #include "MAAT/Core/Input.h"
 #include "MAAT/Core/KeyCodes.h"

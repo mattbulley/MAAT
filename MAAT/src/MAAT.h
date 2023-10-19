@@ -2,6 +2,8 @@
 
 // For use by MAAT applications
 
+#include "MAAT/Core/Core.h"
+
 #include "MAAT/Core/Application.h"
 #include "MAAT/Core/Layer.h"
 #include "MAAT/Core/Log.h"
@@ -10,7 +12,7 @@
 
 #include "MAAT/Core/Input.h"
 #include "MAAT/Core/KeyCodes.h"
-#include "MAAT/Core/MouseButtonCodes.h"
+#include "MAAT/Core/MouseCodes.h"
 #include "MAAT/Renderer/OrthographicCameraController.h"
 
 #include "MAAT/ImGui/ImGuiLayer.h"

@@ -84,7 +84,7 @@
     <ClInclude Include="src\MAAT\Core\Log.h">
       <Filter>src\MAAT\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\MAAT\Core\MouseButtonCodes.h">
+    <ClInclude Include="src\MAAT\Core\MouseCodes.h">
       <Filter>src\MAAT\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Core\Timestep.h">
@@ -1427,6 +1427,9 @@
     <ClCompile Include="src\MAAT\Core\Application.cpp">
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\MAAT\Core\Input.cpp">
+      <Filter>src\MAAT\Core</Filter>
+    </ClCompile>
     <ClCompile Include="src\MAAT\Core\Layer.cpp">
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
@@ -1434,6 +1437,9 @@
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Core\Log.cpp">
+      <Filter>src\MAAT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Core\Window.cpp">
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\ImGui\ImGuiBuild.cpp">
@@ -1445,13 +1451,16 @@
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\GraphicsContext.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\OrthographicCamera.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\OrthographicCameraController.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
-    <ClCompile Include="src\MAAT\Renderer\RenderCommandcpp.cpp">
+    <ClCompile Include="src\MAAT\Renderer\RenderCommand.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Renderer.cpp">

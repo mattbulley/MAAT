@@ -1,7 +1,7 @@
 #include "mtpch.h"
-#include "Shader.h"
+#include "MAAT/Renderer/Shader.h"
 
-#include "Renderer.h"
+#include "MAAT/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLShader.h"
 
 namespace MAAT {
@@ -11,7 +11,7 @@ namespace MAAT {
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:    MAAT_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::OpenGL:  return std::make_shared<OpenGLShader>(filepath);
+			case RendererAPI::API::OpenGL:  return CreateRef<OpenGLShader>(filepath);
 		}
 
 		MAAT_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,7 +23,7 @@ namespace MAAT {
 		switch (Renderer::GetAPI())
 		{
 			case RendererAPI::API::None:    MAAT_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
-			case RendererAPI::API::OpenGL:  return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);
+			case RendererAPI::API::OpenGL:  return CreateRef<OpenGLShader>(name, vertexSrc, fragmentSrc);
 		}
 
 		MAAT_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -42,21 +42,21 @@ namespace MAAT {
 		Add(name, shader);
 	}
 
-	Ref<MAAT::Shader> ShaderLibrary::Load(const std::string& filepath)
+	Ref<Shader> ShaderLibrary::Load(const std::string& filepath)
 	{
 		auto shader = Shader::Create(filepath);
 		Add(shader);
 		return shader;
 	}
 
-	Ref<MAAT::Shader> ShaderLibrary::Load(const std::string& name, const std::string& filepath)
+	Ref<Shader> ShaderLibrary::Load(const std::string& name, const std::string& filepath)
 	{
 		auto shader = Shader::Create(filepath);
 		Add(name, shader);
 		return shader;
 	}
 
-	Ref<MAAT::Shader> ShaderLibrary::Get(const std::string& name)
+	Ref<Shader> ShaderLibrary::Get(const std::string& name)
 	{
 		MAAT_CORE_ASSERT(Exists(name), "Shader not found!");
 		return m_Shaders[name];

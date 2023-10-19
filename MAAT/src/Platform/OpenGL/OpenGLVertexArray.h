@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "MAAT/Renderer/VertexArray.h"
 
 namespace MAAT {

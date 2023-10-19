@@ -62,10 +62,18 @@ namespace MAAT {
 		if (in)
 		{
 			in.seekg(0, std::ios::end);
-			result.resize(in.tellg());
-			in.seekg(0, std::ios::beg);
-			in.read(&result[0], result.size());
-			in.close();
+			size_t size = in.tellg();
+			if (size != -1)
+			{
+				result.resize(in.tellg());
+				in.seekg(0, std::ios::beg);
+				in.read(&result[0], result.size());
+				in.close();
+			}
+			else
+			{
+				MAAT_CORE_ERROR("Could not read from file '{0}'", filepath);
+			}
 		}
 		else
 		{
@@ -93,8 +101,11 @@ namespace MAAT {
 			MAAT_CORE_ASSERT(ShaderTypeFromString(type), "Invalid shader type specified");
 
 			size_t nextLinePos = source.find_first_not_of("\r\n", eol);
+			MAAT_CORE_ASSERT(nextLinePos != std::string::npos, "Syntax error");
 			pos = source.find(typeToken, nextLinePos);
-			shaderSources[ShaderTypeFromString(type)] = source.substr(nextLinePos, pos - (nextLinePos == std::string::npos ? source.size() - 1 : nextLinePos));
+
+			//shaderSources[ShaderTypeFromString(type)] = source.substr(nextLinePos, pos - (nextLinePos == std::string::npos ? source.size() - 1 : nextLinePos));
+			shaderSources[ShaderTypeFromString(type)] = (pos == std::string::npos) ? source.substr(nextLinePos) : source.substr(nextLinePos, pos - nextLinePos);
 		}
 
 		return shaderSources;
@@ -141,6 +152,8 @@ namespace MAAT {
 			glShaderIDs[glShaderIDIndex++] = shader;
 		}
 
+		m_RendererID = program;
+
 		glLinkProgram(program);
 
 		GLint isLinked = 0;
@@ -156,7 +169,7 @@ namespace MAAT {
 			glDeleteProgram(program);
 			
 			for (auto id : glShaderIDs)
-				glDeleteProgram(program);
+				glDeleteProgram(id);
 
 			MAAT_CORE_ERROR("{0}", infoLog.data());
 			MAAT_CORE_ASSERT(false, "Shader link failure!");
@@ -164,7 +177,11 @@ namespace MAAT {
 		}
 
 		for (auto id : glShaderIDs)
+		{
 			glDetachShader(program, id);
+			
+
+		}
 
 		m_RendererID = program;
 	}
@@ -188,6 +205,11 @@ namespace MAAT {
 		MAAT_PROFILE_FUNCTION();
 
 		UploadUniformInt(name, value);
+	}
+
+	void OpenGLShader::SetIntArray(const std::string& name, int* values, uint32_t count)
+	{
+		UploadUniformIntArray(name, values, count);
 	}
 
 	void OpenGLShader::SetFloat(const std::string& name, float value)
@@ -222,6 +244,12 @@ namespace MAAT {
 	{
 		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
 		glUniform1i(location, value);
+	}
+
+	void OpenGLShader::UploadUniformIntArray(const std::string& name, int* values, uint32_t count)
+	{
+		GLint location = glGetUniformLocation(m_RendererID, name.c_str());
+		glUniform1iv(location, count, values);
 	}
 
 	void OpenGLShader::UploadUniformFloat(const std::string& name, float value)

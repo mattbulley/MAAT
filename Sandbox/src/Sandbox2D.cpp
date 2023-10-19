@@ -1,5 +1,5 @@
 #include "Sandbox2D.h"
-#include "imgui/imgui.h"
+#include <imgui/imgui.h>
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -26,7 +26,6 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 	MAAT_PROFILE_FUNCTION();
 
 	// Update
-	
 	m_CameraController.OnUpdate(ts);
 
 	// Render
@@ -42,7 +41,8 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 		//MAAT::Renderer2D::DrawRotatedQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, glm::radians(-45.0f), { 0.8f, 0.2f, 0.3f, 1.0f });
 		MAAT::Renderer2D::DrawQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
 		MAAT::Renderer2D::DrawQuad({ 0.5f, -0.5f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });
-		//MAAT::Renderer2D::DrawQuad({ 0.0f, 0.0f, -0.1f}, { 10.0f, 10.0f }, m_AlienTexture, 10.0f);
+		MAAT::Renderer2D::DrawQuad({ -5.0f, -5.0f, -0.1f}, { 10.0f, 10.0f }, m_AlienTexture, 10.0f);
+		MAAT::Renderer2D::DrawQuad({ -0.5f, -0.5f, 0.0f}, { 1.0f, 1.0f }, m_AlienTexture, 20.0f);
 		MAAT::Renderer2D::EndScene();
 	}
 }
