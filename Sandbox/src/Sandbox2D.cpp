@@ -42,20 +42,20 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 
 		MAAT_PROFILE_SCOPE("Renderer Draw");
 		MAAT::Renderer2D::BeginScene(m_CameraController.GetCamera());
-		MAAT::Renderer2D::DrawRotatedQuad({ 1.0f, 0.0f }, { 0.8f, 0.8f }, -45.0f, { 0.8f, 0.2f, 0.3f, 1.0f });
-		MAAT::Renderer2D::DrawQuad({ -1.0f, 0.0f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
-		MAAT::Renderer2D::DrawQuad({ 0.5f, -0.5f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });
-		//MAAT::Renderer2D::DrawQuad({ 0.0f, 0.0f, -0.1f}, { 20.0f, 20.0f }, m_AlienTexture, 1.0f);
-		MAAT::Renderer2D::DrawRotatedQuad({ -2.0f, 0.0f, 0.0f}, { 1.0f, 1.0f }, rotation, m_AlienTexture, 20.0f);
+		MAAT::Renderer2D::DrawRotatedQuad({ 1.0f, 0.0f, 0.1f }, { 0.8f, 0.8f }, -45.0f, { 0.8f, 0.2f, 0.3f, 1.0f });
+		MAAT::Renderer2D::DrawQuad({ -1.0f, 0.0f, 0.1f }, { 0.8f, 0.8f }, { 0.8f, 0.2f, 0.3f, 1.0f });
+		MAAT::Renderer2D::DrawQuad({ 0.5f, -0.5f, 0.1f }, { 0.5f, 0.75f }, { 0.2f, 0.3f, 0.8f, 1.0f });
+		MAAT::Renderer2D::DrawQuad({ 0.0f, 0.0f, 0.1f}, { 5.0f, 5.0f }, m_AlienTexture, 1.0f, { 1.0f, 0.5f, 0.5f, 1.0f });
+		//MAAT::Renderer2D::DrawRotatedQuad({ -2.0f, 0.0f, 0.1f}, { 1.0f, 1.0f }, rotation, m_AlienTexture, 20.0f);
 		//MAAT::Renderer2D::EndScene();
 
 		//MAAT::Renderer2D::BeginScene(m_CameraController.GetCamera());
-		for (float y = -5.0f; y < 5.0f; y += 0.3f)
+		for (float y = -5.0f; y < 5.0f; y += 0.25f)
 		{
-			for (float x = -5.0f; x < 5.0f; x += 0.3f)
+			for (float x = -5.0f; x < 5.0f; x += 0.25f)
 			{
 				glm::vec4 color = { (x + 0.5f) / 10.0f, 0.4f, (y + 5.0f) / 10.0f , 0.9f};
-				MAAT::Renderer2D::DrawQuad({ x, y }, { 0.28f, 0.28f }, color);
+				MAAT::Renderer2D::DrawQuad({ x, y , 0.1f}, { 0.24f, 0.24f }, color);
 			}
 		}
 		MAAT::Renderer2D::EndScene();
