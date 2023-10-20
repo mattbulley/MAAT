@@ -51,6 +51,11 @@ namespace MAAT {
 		layer->OnAttach();
 	}
 
+	void Application::Close()
+	{
+		m_Running = false;
+	}
+
 	void Application::OnEvent(Event& e)
 	{
 		MAAT_PROFILE_FUNCTION();
