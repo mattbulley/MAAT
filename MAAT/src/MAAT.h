@@ -25,6 +25,7 @@
 #include "MAAT/Renderer/Buffer.h"
 #include "MAAT/Renderer/Shader.h"
 #include "MAAT/Renderer/Texture.h"
+#include "MAAT/Renderer/SubTexture2D.h"
 #include "MAAT/Renderer/VertexArray.h"
 
 #include "MAAT/Renderer/OrthographicCamera.h"

@@ -138,6 +138,9 @@
     <ClInclude Include="src\MAAT\Renderer\Shader.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\SubTexture2D.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Texture.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
@@ -1473,6 +1476,9 @@
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Shader.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\SubTexture2D.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Texture.cpp">

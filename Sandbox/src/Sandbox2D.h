@@ -25,6 +25,7 @@ private:
 
 	MAAT::Ref<MAAT::Texture2D> m_AlienTexture;
 	MAAT::Ref<MAAT::Texture2D> m_SpriteSheet;
+	MAAT::Ref<MAAT::SubTexture2D> m_TextureStairs, m_TextureBarrel, m_TextureTree;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 
