@@ -87,6 +87,9 @@
     <ClInclude Include="src\MAAT\Core\MouseCodes.h">
       <Filter>src\MAAT\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Core\Random.h">
+      <Filter>src\MAAT\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Core\Timestep.h">
       <Filter>src\MAAT\Core</Filter>
     </ClInclude>
@@ -1437,6 +1440,9 @@
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Core\Log.cpp">
+      <Filter>src\MAAT\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Core\Random.cpp">
       <Filter>src\MAAT\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Core\Window.cpp">
