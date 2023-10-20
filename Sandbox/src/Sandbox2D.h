@@ -24,6 +24,7 @@ private:
 	MAAT::Ref<MAAT::Shader> m_FlatColorShader;
 
 	MAAT::Ref<MAAT::Texture2D> m_AlienTexture;
+	MAAT::Ref<MAAT::Texture2D> m_SpriteSheet;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 

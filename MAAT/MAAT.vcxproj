@@ -150,7 +150,6 @@
     <ClInclude Include="src\MAAT\Core\LayerStack.h" />
     <ClInclude Include="src\MAAT\Core\Log.h" />
     <ClInclude Include="src\MAAT\Core\MouseCodes.h" />
-    <ClInclude Include="src\MAAT\Core\Random.h" />
     <ClInclude Include="src\MAAT\Core\Timestep.h" />
     <ClInclude Include="src\MAAT\Core\Window.h" />
     <ClInclude Include="src\MAAT\Debug\Instrumentor.h" />
@@ -603,7 +602,6 @@
     <ClCompile Include="src\MAAT\Core\Layer.cpp" />
     <ClCompile Include="src\MAAT\Core\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Core\Log.cpp" />
-    <ClCompile Include="src\MAAT\Core\Random.cpp" />
     <ClCompile Include="src\MAAT\Core\Window.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiLayer.cpp" />
@@ -645,4 +643,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>

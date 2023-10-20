@@ -14,6 +14,7 @@ void Sandbox2D::OnAttach()
 	MAAT_PROFILE_FUNCTION();
 
 	m_AlienTexture = MAAT::Texture2D::Create("assets/textures/alien.png");
+	m_SpriteSheet = MAAT::Texture2D::Create("assets/game/textures/RPGpack_sheet_2X.png");
 
 	m_Particle.ColorBegin = { 254 / 255.0f, 212 / 255.0f, 123 / 255.0f, 1.0f };
 	m_Particle.ColorEnd = { 254 / 255.0f, 109 / 255.0f, 41 / 255.0f, 1.0f };
@@ -44,6 +45,8 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 		MAAT::RenderCommand::Clear();
 	}
 
+#if 0
+
 	{
 		static float rotation = 0.0f;
 		rotation += ts * 50.0f;
@@ -69,6 +72,8 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 		MAAT::Renderer2D::EndScene();*/
 	}
 
+#endif
+
 	if (MAAT::Input::IsMouseButtonPressed(MAAT_MOUSE_BUTTON_LEFT))
 	{
 		auto [x, y] = MAAT::Input::GetMousePosition();
@@ -87,6 +92,10 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 
 	m_ParticleSystem.OnUpdate(ts);
 	m_ParticleSystem.OnRender(m_CameraController.GetCamera());
+
+	MAAT::Renderer2D::BeginScene(m_CameraController.GetCamera());
+	MAAT::Renderer2D::DrawQuad({ 0.0f, 0.0f, 0.5f }, { 1.0f, 1.0f }, m_SpriteSheet);
+	MAAT::Renderer2D::EndScene();
 }
 
 void Sandbox2D::OnImGuiRender()
