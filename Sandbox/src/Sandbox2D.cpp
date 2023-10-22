@@ -31,6 +31,11 @@ void Sandbox2D::OnAttach()
 {
 	MAAT_PROFILE_FUNCTION();
 
+	MAAT::FramebufferSpecification fbSpec;
+	fbSpec.Width = 1280;
+	fbSpec.Height = 720;
+	m_Framebuffer = MAAT::Framebuffer::Create(fbSpec);
+
 	m_AlienTexture = MAAT::Texture2D::Create("assets/textures/alien.png");
 	m_SpriteSheet = MAAT::Texture2D::Create("assets/game/textures/RPGpack_sheet_2X.png");
 
@@ -70,6 +75,7 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 	MAAT::Renderer2D::ResetStats();
 	{
 		MAAT_PROFILE_SCOPE("Renderer Prep");
+		m_Framebuffer->Bind();
 		MAAT::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		MAAT::RenderCommand::Clear();
 	}
@@ -143,6 +149,7 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 	//MAAT::Renderer2D::DrawQuad({ 1.0f, 0.0f, 0.5f }, { 1.0f, 1.0f }, m_TextureBarrel);
 	//MAAT::Renderer2D::DrawQuad({ -1.0f, 0.5f, 0.5f }, { 1.0f, 2.0f }, m_TextureTree);
 	MAAT::Renderer2D::EndScene();
+	m_Framebuffer->Unbind();
 }
 
 void Sandbox2D::OnImGuiRender()
@@ -226,8 +233,8 @@ void Sandbox2D::OnImGuiRender()
 
 	ImGui::ColorEdit4("Square Color", glm::value_ptr(m_SquareColor));
 
-	uint32_t textureID = m_AlienTexture->GetRendererID();
-	ImGui::Image((void*)textureID, ImVec2{ 256.0f, 256.0f });
+	uint32_t textureID = m_Framebuffer->GetColorAttachmentID();
+	ImGui::Image((void*)textureID, ImVec2{ 1280.0f, 720.0f }, ImVec2{ 0, 1 }, ImVec2{ 1, 0 });
 	ImGui::End();
 	
 	ImGui::End();
