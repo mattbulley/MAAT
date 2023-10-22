@@ -22,7 +22,6 @@ private:
 	// Temp
 	MAAT::Ref<MAAT::VertexArray> m_SquareVA;
 	MAAT::Ref<MAAT::Shader> m_FlatColorShader;
-	MAAT::Ref<MAAT::Framebuffer> m_Framebuffer;
 
 	MAAT::Ref<MAAT::Texture2D> m_AlienTexture;
 	MAAT::Ref<MAAT::Texture2D> m_SpriteSheet;

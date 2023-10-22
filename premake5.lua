@@ -19,9 +19,11 @@ IncludeDir["ImGui"] = "MAAT/vendor/imgui"
 IncludeDir["glm"] = "MAAT/vendor/glm"
 IncludeDir["stb_image"] = "MAAT/vendor/stb_image"
 
-include "MAAT/vendor/GLFW"
-include "MAAT/vendor/Glad"
-include "MAAT/vendor/imgui"
+group "Dependencies"
+	include "MAAT/vendor/GLFW"
+	include "MAAT/vendor/Glad"
+	include "MAAT/vendor/imgui"
+group ""
 
 project "MAAT"
 	location "MAAT"
@@ -96,6 +98,53 @@ project "MAAT"
 
 project "Sandbox"
 	location "Sandbox"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"MAAT/vendor/spdlog/include",
+		"MAAT/vendor/glm",
+		"MAAT/src",
+		"MAAT/vendor"
+	}
+
+	links
+	{
+		"MAAT"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+	filter "configurations:Debug"
+		defines "MAAT_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "MAAT_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "MAAT_DIST"
+		runtime "Release"
+		optimize "on"
+
+project "MAAT-Editor"
+	location "MAAT-Editor"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
