@@ -1,6 +1,6 @@
 workspace "MAAT"
 	architecture "x64"
-	startproject "Sandbox"
+	startproject "MAAT-Editor"
 
 	configurations
 	{
