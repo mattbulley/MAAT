@@ -22,6 +22,9 @@
     <Filter Include="src\MAAT\Renderer">
       <UniqueIdentifier>{E5431ED8-515A-1C6E-9AD1-A78F0627EDF5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MAAT\Scene">
+      <UniqueIdentifier>{BC3D06EA-A80B-FAEF-919F-6A167D0CD654}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
     </Filter>
@@ -149,6 +152,12 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\VertexArray.h">
       <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Scene\Components.h">
+      <Filter>src\MAAT\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Scene\Scene.h">
+      <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -1489,6 +1498,9 @@
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\VertexArray.cpp">
       <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Scene\Scene.cpp">
+      <Filter>src\MAAT\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>

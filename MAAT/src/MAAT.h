@@ -17,6 +17,9 @@
 
 #include "MAAT/ImGui/ImGuiLayer.h"
 
+#include "MAAT/Scene/Scene.h"
+#include "MAAT/Scene/Components.h"
+
 // ---Renderer------------------------
 #include "MAAT/Renderer/Renderer.h"
 #include "MAAT/Renderer/Renderer2D.h"

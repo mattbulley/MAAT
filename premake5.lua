@@ -18,6 +18,7 @@ IncludeDir["Glad"] = "MAAT/vendor/Glad/include"
 IncludeDir["ImGui"] = "MAAT/vendor/imgui"
 IncludeDir["glm"] = "MAAT/vendor/glm"
 IncludeDir["stb_image"] = "MAAT/vendor/stb_image"
+IncludeDir["entt"] = "MAAT/vendor/entt/include"
 
 group "Dependencies"
 	include "MAAT/vendor/GLFW"
@@ -50,7 +51,8 @@ project "MAAT"
 
 	defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"GLFW_INCLUDE_NONE"
 	}
 
 	includedirs
@@ -61,7 +63,8 @@ project "MAAT"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -77,8 +80,6 @@ project "MAAT"
 
 		defines
 		{
-			"MAAT_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
 		}
 
 	filter "configurations:Debug"
@@ -115,9 +116,9 @@ project "Sandbox"
 	includedirs
 	{
 		"MAAT/vendor/spdlog/include",
-		"MAAT/vendor/glm",
 		"MAAT/src",
-		"MAAT/vendor"
+		"MAAT/vendor",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -162,9 +163,10 @@ project "MAAT-Editor"
 	includedirs
 	{
 		"MAAT/vendor/spdlog/include",
-		"MAAT/vendor/glm",
 		"MAAT/src",
-		"MAAT/vendor"
+		"MAAT/vendor",
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
