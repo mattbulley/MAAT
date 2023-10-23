@@ -17,7 +17,7 @@ int main(int argc, char** argv)
 	app->Run();
 	MAAT_PROFILE_END_SESSION();
 
-	MAAT_PROFILE_BEGIN_SESSION("Startup", "MAATProfile-Shutdown.json");
+	MAAT_PROFILE_BEGIN_SESSION("Shutdown", "MAATProfile-Shutdown.json");
 	delete app;
 	MAAT_PROFILE_END_SESSION();
 }
