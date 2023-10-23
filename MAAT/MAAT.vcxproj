@@ -172,6 +172,7 @@
     <ClInclude Include="src\MAAT\Renderer\Texture.h" />
     <ClInclude Include="src\MAAT\Renderer\VertexArray.h" />
     <ClInclude Include="src\MAAT\Scene\Components.h" />
+    <ClInclude Include="src\MAAT\Scene\Entity.h" />
     <ClInclude Include="src\MAAT\Scene\Scene.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
@@ -621,6 +622,7 @@
     <ClCompile Include="src\MAAT\Renderer\SubTexture2D.cpp" />
     <ClCompile Include="src\MAAT\Renderer\Texture.cpp" />
     <ClCompile Include="src\MAAT\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\MAAT\Scene\Entity.cpp" />
     <ClCompile Include="src\MAAT\Scene\Scene.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />

@@ -156,6 +156,9 @@
     <ClInclude Include="src\MAAT\Scene\Components.h">
       <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Scene\Entity.h">
+      <Filter>src\MAAT\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Scene\Scene.h">
       <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
@@ -1498,6 +1501,9 @@
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\VertexArray.cpp">
       <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Scene\Entity.cpp">
+      <Filter>src\MAAT\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Scene\Scene.cpp">
       <Filter>src\MAAT\Scene</Filter>

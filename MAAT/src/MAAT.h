@@ -18,6 +18,7 @@
 #include "MAAT/ImGui/ImGuiLayer.h"
 
 #include "MAAT/Scene/Scene.h"
+#include "MAAT/Scene/Entity.h"
 #include "MAAT/Scene/Components.h"
 
 // ---Renderer------------------------
