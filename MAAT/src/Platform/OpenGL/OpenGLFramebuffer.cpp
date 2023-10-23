@@ -5,6 +5,8 @@
 
 namespace MAAT {
 
+	static const uint32_t MaxFramebufferSize = 8192;
+
 	OpenGLFramebuffer::OpenGLFramebuffer(const FramebufferSpecification& spec)
 		: m_Specification(spec)
 	{
@@ -61,6 +63,11 @@ namespace MAAT {
 
 	void OpenGLFramebuffer::Resize(uint32_t width, uint32_t height)
 	{
+		if (width == 0 || height == 0 || width > MaxFramebufferSize || height > MaxFramebufferSize)
+		{
+			MAAT_CORE_WARN("Attempted to resize framebuffer to {0}, {1}", width, height);
+		}
+
 		m_Specification.Width = width;
 		m_Specification.Height = height;
 
