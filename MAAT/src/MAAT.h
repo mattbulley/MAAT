@@ -19,6 +19,7 @@
 
 #include "MAAT/Scene/Scene.h"
 #include "MAAT/Scene/Entity.h"
+#include "MAAT/Scene/ScriptableEntity.h"
 #include "MAAT/Scene/Components.h"
 
 // ---Renderer------------------------

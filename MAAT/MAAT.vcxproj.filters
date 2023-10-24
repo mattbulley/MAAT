@@ -168,6 +168,9 @@
     <ClInclude Include="src\MAAT\Scene\SceneCamera.h">
       <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Scene\ScriptableEntity.h">
+      <Filter>src\MAAT\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
