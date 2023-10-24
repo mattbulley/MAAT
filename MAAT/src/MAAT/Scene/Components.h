@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-#include "MAAT/Renderer/Camera.h"
+#include "MAAT/Scene/SceneCamera.h"
 
 namespace MAAT {
 
@@ -41,13 +41,12 @@ namespace MAAT {
 
 	struct CameraComponent
 	{
-		MAAT::Camera Camera;
+		SceneCamera Camera;
 		bool Primary = true; // TODO: think about moving to scene
+		bool FixedAspectRatio = false;
 
 		CameraComponent() = default;
 		CameraComponent(const CameraComponent&) = default;
-		CameraComponent(const glm::mat4& projection)
-			: Camera(projection) {}
 	};
 
 }
