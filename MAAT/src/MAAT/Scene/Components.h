@@ -2,6 +2,8 @@
 
 #include <glm/glm.hpp>
 
+#include "MAAT/Renderer/Camera.h"
+
 namespace MAAT {
 
 	struct TagComponent
@@ -35,6 +37,17 @@ namespace MAAT {
 		SpriteRendererComponent(const SpriteRendererComponent&) = default;
 		SpriteRendererComponent(const glm::vec4& color)
 			: Color(color) {}
+	};
+
+	struct CameraComponent
+	{
+		MAAT::Camera Camera;
+		bool Primary = true; // TODO: think about moving to scene
+
+		CameraComponent() = default;
+		CameraComponent(const CameraComponent&) = default;
+		CameraComponent(const glm::mat4& projection)
+			: Camera(projection) {}
 	};
 
 }

@@ -159,6 +159,7 @@
     <ClInclude Include="src\MAAT\Events\MouseEvent.h" />
     <ClInclude Include="src\MAAT\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\MAAT\Renderer\Buffer.h" />
+    <ClInclude Include="src\MAAT\Renderer\Camera.h" />
     <ClInclude Include="src\MAAT\Renderer\Framebuffer.h" />
     <ClInclude Include="src\MAAT\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\MAAT\Renderer\OrthographicCamera.h" />
@@ -652,4 +653,4 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-</Project> 
+</Project>
