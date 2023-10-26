@@ -3,6 +3,8 @@
 #include "MAAT.h"
 #include "Panels/SceneHierarchyPanel.h"
 
+#include "MAAT/Renderer/EditorCamera.h"
+
 namespace MAAT {
 
 	class EditorLayer : public Layer
@@ -37,6 +39,8 @@ namespace MAAT {
 		Entity m_SecondCamera;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
 
 		Ref<Texture2D> m_AlienTexture;
 

@@ -132,6 +132,9 @@
     <ClInclude Include="src\MAAT\Renderer\Camera.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Renderer\EditorCamera.h">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Framebuffer.h">
       <Filter>src\MAAT\Renderer</Filter>
     </ClInclude>
@@ -1497,6 +1500,9 @@
       <Filter>src\MAAT\Math</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">
+      <Filter>src\MAAT\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Renderer\EditorCamera.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Framebuffer.cpp">

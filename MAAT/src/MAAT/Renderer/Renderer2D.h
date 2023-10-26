@@ -6,6 +6,7 @@
 #include "MAAT/Renderer/SubTexture2D.h"
 
 #include "MAAT/Renderer/Camera.h"
+#include "MAAT/Renderer/EditorCamera.h"
 
 namespace MAAT {
 
@@ -16,6 +17,7 @@ namespace MAAT {
 		static void Shutdown();
 
 		static void BeginScene(const Camera& camera, const glm::mat4& transform);
+		static void BeginScene(const EditorCamera& camera);
 		static void BeginScene(const OrthographicCamera& camera); // TODO: Remove
 		static void EndScene();
 		static void Flush();
