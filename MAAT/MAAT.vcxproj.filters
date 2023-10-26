@@ -168,6 +168,9 @@
     <ClInclude Include="src\MAAT\Scene\SceneCamera.h">
       <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\MAAT\Scene\SceneSerializer.h">
+      <Filter>src\MAAT\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\MAAT\Scene\ScriptableEntity.h">
       <Filter>src\MAAT\Scene</Filter>
     </ClInclude>
@@ -1518,6 +1521,9 @@
       <Filter>src\MAAT\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\MAAT\Scene\SceneCamera.cpp">
+      <Filter>src\MAAT\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MAAT\Scene\SceneSerializer.cpp">
       <Filter>src\MAAT\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">

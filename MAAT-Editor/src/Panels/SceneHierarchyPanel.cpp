@@ -96,6 +96,15 @@ namespace MAAT {
 		ImGuiIO& io = ImGui::GetIO();
 		auto boldFont = io.Fonts->Fonts[0];
 
+		ImVec4 green = { 57.0f / 255.0f, 211.0f / 255.0f, 83.0f / 255.0f, 1.0f};
+		ImVec4 green2 = { 38.0f / 255.0f, 166.0f / 255.0f, 65.0f / 255.0f, 1.0f };
+		ImVec4 green3 = { 0.0f / 255.0f, 109.0f / 255.0f, 50.0f / 255.0f, 1.0f };
+		ImVec4 green4 = { 14.0f / 255.0f, 68.0f / 255.0f, 41.0f / 255.0f, 1.0f };
+		ImVec4 green5 = { 22.0f / 255.0f, 27.0f / 255.0f, 34.0f / 255.0f, 1.0f };
+
+		ImVec4 blue = { 31.0f / 255.0f, 111.0f / 255.0f, 235.0f / 255.0f, 1.0f };
+		ImVec4 pink = { 243.0f / 255.0f, 75.0f / 255.0f, 125.0f / 255.0f, 1.0f };
+
 		ImGui::PushID(label.c_str());
 
 		ImGui::Columns(2);
@@ -109,7 +118,8 @@ namespace MAAT {
 		float lineHeight = GImGui->Font->FontSize + GImGui->Style.FramePadding.y * 2.0f;
 		ImVec2 buttonSize = { lineHeight + 3.0f, lineHeight };
 
-		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.8f, 0.1f, 0.15f, 1.0f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.8f, 0.1f, 0.15f, 0.5f });
+		ImGui::PushStyleColor(ImGuiCol_Button, green2);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.9f, 0.2f, 0.2f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.8f, 0.1f, 0.15f, 1.0f });
 		ImGui::PushFont(boldFont);
@@ -123,7 +133,8 @@ namespace MAAT {
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
-		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.2f, 0.7f, 0.2f, 1.0f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.2f, 0.7f, 0.2f, 0.5f });
+		ImGui::PushStyleColor(ImGuiCol_Button, green3);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.3f, 0.8f, 0.3f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.2f, 0.7f, 0.2f, 1.0f });
 		ImGui::PushFont(boldFont);
@@ -137,7 +148,8 @@ namespace MAAT {
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
-		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.1f, 0.25f, 0.8f, 1.0f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.1f, 0.25f, 0.8f, 0.5f });
+		ImGui::PushStyleColor(ImGuiCol_Button, green4);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.2f, 0.35f, 0.9f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.1f, 0.25f, 0.8f, 1.0f });
 		ImGui::PushFont(boldFont);

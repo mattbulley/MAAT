@@ -19,11 +19,13 @@ IncludeDir["ImGui"] = "MAAT/vendor/imgui"
 IncludeDir["glm"] = "MAAT/vendor/glm"
 IncludeDir["stb_image"] = "MAAT/vendor/stb_image"
 IncludeDir["entt"] = "MAAT/vendor/entt/include"
+IncludeDir["yaml_cpp"] = "MAAT/vendor/yaml-cpp/include"
 
 group "Dependencies"
 	include "MAAT/vendor/GLFW"
 	include "MAAT/vendor/Glad"
 	include "MAAT/vendor/imgui"
+	include "MAAT/vendor/yaml-cpp"
 group ""
 
 project "MAAT"
@@ -64,7 +66,8 @@ project "MAAT"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
 	}
 
 	links
@@ -72,6 +75,7 @@ project "MAAT"
 		"GLFW",
 		"Glad",
 		"ImGui",
+		"yaml-cpp",
 		"opengl32.lib"
 	}
 
