@@ -25,6 +25,9 @@
     <Filter Include="src\MAAT\Scene">
       <UniqueIdentifier>{BC3D06EA-A80B-FAEF-919F-6A167D0CD654}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MAAT\Utils">
+      <UniqueIdentifier>{FFD133EA-EB9F-27F0-D433-9816C0A00355}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
     </Filter>
@@ -173,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\Scene\ScriptableEntity.h">
       <Filter>src\MAAT\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Utils\PlatformUtils.h">
+      <Filter>src\MAAT\Utils</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -1548,6 +1554,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
