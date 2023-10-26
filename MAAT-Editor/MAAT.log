@@ -1,20 +1,10 @@
-[13:57:06] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[13:57:06] [info] MAAT: OpenGL Info:
-[13:57:06] [info] MAAT:   Vendor: ATI Technologies Inc.
-[13:57:06] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[13:57:06] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[13:57:20] [trace] MAAT: Deserializing scene 'Untitled'
-[13:57:20] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera B
-[13:57:20] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera A
-[13:57:20] [trace] MAAT: Deserialized entity with ID = 1234567, name = Red Square
-[13:57:20] [trace] MAAT: Deserialized entity with ID = 1234567, name = Green Square
-[13:58:23] [trace] MAAT: Deserializing scene 'Untitled'
-[13:58:23] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera B
-[13:58:23] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera A
-[13:58:23] [trace] MAAT: Deserialized entity with ID = 1234567, name = Red Square
-[13:58:23] [trace] MAAT: Deserialized entity with ID = 1234567, name = Green Square
-[13:58:56] [trace] MAAT: Deserializing scene 'Untitled'
-[13:58:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Green Square
-[13:58:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Pink Square
-[13:58:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera A
-[13:58:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera B
+[17:29:02] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[17:29:02] [info] MAAT: OpenGL Info:
+[17:29:02] [info] MAAT:   Vendor: ATI Technologies Inc.
+[17:29:02] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[17:29:02] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[17:29:08] [trace] MAAT: Deserializing scene 'Untitled'
+[17:29:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
+[17:29:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
+[17:29:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
+[17:29:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left

@@ -119,8 +119,8 @@ namespace MAAT {
 		float lineHeight = GImGui->Font->FontSize + GImGui->Style.FramePadding.y * 2.0f;
 		ImVec2 buttonSize = { lineHeight + 3.0f, lineHeight };
 
-		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.8f, 0.1f, 0.15f, 0.5f });
-		ImGui::PushStyleColor(ImGuiCol_Button, green2);
+		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.8f, 0.1f, 0.15f, 0.9f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, green2);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.9f, 0.2f, 0.2f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.8f, 0.1f, 0.15f, 1.0f });
 		ImGui::PushFont(boldFont);
@@ -134,8 +134,8 @@ namespace MAAT {
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
-		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.2f, 0.7f, 0.2f, 0.5f });
-		ImGui::PushStyleColor(ImGuiCol_Button, green3);
+		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.2f, 0.7f, 0.2f, 0.9f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, green3);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.3f, 0.8f, 0.3f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.2f, 0.7f, 0.2f, 1.0f });
 		ImGui::PushFont(boldFont);
@@ -149,8 +149,8 @@ namespace MAAT {
 		ImGui::PopItemWidth();
 		ImGui::SameLine();
 
-		//ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.1f, 0.25f, 0.8f, 0.5f });
-		ImGui::PushStyleColor(ImGuiCol_Button, green4);
+		ImGui::PushStyleColor(ImGuiCol_Button, ImVec4{ 0.1f, 0.25f, 0.8f, 0.9f });
+		//ImGui::PushStyleColor(ImGuiCol_Button, green4);
 		ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4{ 0.2f, 0.35f, 0.9f, 1.0f });
 		ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4{ 0.1f, 0.25f, 0.8f, 1.0f });
 		ImGui::PushFont(boldFont);

@@ -7,3 +7,6 @@
 [submodule "MAAT/Vendor/yaml-cpp"]
 	path = MAAT/Vendor/yaml-cpp
 	url = https://github.com/thecherno/yaml-cpp
+[submodule "MAAT/vendor/ImGuizmo"]
+	path = MAAT/vendor/ImGuizmo
+	url = https://github.com/thecherno/imguizmo

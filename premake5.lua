@@ -20,6 +20,7 @@ IncludeDir["glm"] = "MAAT/vendor/glm"
 IncludeDir["stb_image"] = "MAAT/vendor/stb_image"
 IncludeDir["entt"] = "MAAT/vendor/entt/include"
 IncludeDir["yaml_cpp"] = "MAAT/vendor/yaml-cpp/include"
+IncludeDir["ImGuizmo"] = "MAAT/vendor/ImGuizmo"
 
 group "Dependencies"
 	include "MAAT/vendor/GLFW"
@@ -48,7 +49,10 @@ project "MAAT"
 		"%{prj.name}/vendor/stb_image/**.h",
 		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
-		"%{prj.name}/vendor/glm/glm/**.inl"
+		"%{prj.name}/vendor/glm/glm/**.inl",
+
+		"%{prj.name}/vendor/ImGuizmo/ImGuizmo.h",
+		"%{prj.name}/vendor/ImGuizmo/ImGuizmo.cpp"
 	}
 
 	defines
@@ -67,7 +71,8 @@ project "MAAT"
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
 		"%{IncludeDir.entt}",
-		"%{IncludeDir.yaml_cpp}"
+		"%{IncludeDir.yaml_cpp}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links
@@ -78,6 +83,9 @@ project "MAAT"
 		"yaml-cpp",
 		"opengl32.lib"
 	}
+
+	filter "files:MAAT/vendor/ImGuizmo/**.cpp"
+	flags { "NoPCH" }
 
 	filter "system:windows"
 		systemversion "latest"
@@ -170,7 +178,8 @@ project "MAAT-Editor"
 		"MAAT/src",
 		"MAAT/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links

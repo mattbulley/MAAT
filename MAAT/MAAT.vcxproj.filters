@@ -19,6 +19,9 @@
     <Filter Include="src\MAAT\ImGui">
       <UniqueIdentifier>{C94556E9-B513-4AEF-9EA7-BA158A142654}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\MAAT\Math">
+      <UniqueIdentifier>{981DF58A-04DE-70C1-CD18-BA3E3998B59D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\MAAT\Renderer">
       <UniqueIdentifier>{E5431ED8-515A-1C6E-9AD1-A78F0627EDF5}</UniqueIdentifier>
     </Filter>
@@ -39,6 +42,9 @@
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\ImGuizmo">
+      <UniqueIdentifier>{73BF7F4C-DF4A-ED10-E85B-700554664911}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
@@ -116,6 +122,9 @@
     </ClInclude>
     <ClInclude Include="src\MAAT\ImGui\ImGuiLayer.h">
       <Filter>src\MAAT\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MAAT\Math\Math.h">
+      <Filter>src\MAAT\Math</Filter>
     </ClInclude>
     <ClInclude Include="src\MAAT\Renderer\Buffer.h">
       <Filter>src\MAAT\Renderer</Filter>
@@ -206,6 +215,9 @@
     </ClInclude>
     <ClInclude Include="src\mtpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -1481,6 +1493,9 @@
     <ClCompile Include="src\MAAT\ImGui\ImGuiLayer.cpp">
       <Filter>src\MAAT\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\MAAT\Math\Math.cpp">
+      <Filter>src\MAAT\Math</Filter>
+    </ClCompile>
     <ClCompile Include="src\MAAT\Renderer\Buffer.cpp">
       <Filter>src\MAAT\Renderer</Filter>
     </ClCompile>
@@ -1564,6 +1579,9 @@
     </ClCompile>
     <ClCompile Include="src\mtpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
