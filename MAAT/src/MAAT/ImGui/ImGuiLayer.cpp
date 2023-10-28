@@ -121,7 +121,7 @@ namespace MAAT {
 		auto& colors = ImGui::GetStyle().Colors;
 
 		ImVec4 navy = { 13.0f / 255.0f, 17.0f / 255.0f, 23.0f / 255.0f, 1.0f };
-		ImVec4 darkNavy = { 1.0f / 255.0f, 4.0f / 255.0f, 9.0f / 255.0f, 1.0f };
+		ImVec4 darkNavy = { 22.0f / 255.0f, 25.0f / 255.0f, 30.0f / 255.0f, 1.0f };
 		ImVec4 button = { 33.0f / 255.0f, 38.0f / 255.0f, 45.0f / 255.0f, 1.0f };
 		ImVec4 buttonLight = { 58.0f / 255.0f, 63.0f / 255.0f, 68.0f / 255.0f, 1.0f };
 		ImVec4 buttonLight2 = { 83.0f / 255.0f, 88.0f / 255.0f, 93.0f / 255.0f, 1.0f };
