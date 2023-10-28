@@ -116,8 +116,16 @@ namespace MAAT {
 		// Render
 		Renderer2D::ResetStats();
 		m_Framebuffer->Bind();
-		RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+		//35, 38, 40
+		//37, 37, 38
+		glm::vec4 clearColor1 = { 35.0f / 255.0f, 38.0f / 255.0f, 40.0f / 255.0f, 1.0f };
+		glm::vec4 clearColor2 = { 37.0f / 255.0f, 37.0f / 255.0f, 38.0f / 255.0f, 1.0f };
+		glm::vec4 clearColor3 = { 20.5f / 255.0f, 23.5f / 255.0f, 25.0f / 255.0f, 1.0f };
+		RenderCommand::SetClearColor(clearColor3);
 		RenderCommand::Clear();
+
+		// Clear our entity ID attachment to -1
+		m_Framebuffer->ClearAttachment(1, -1);
 
 		// Update scene
 		m_ActiveScene->OnUpdateEditor(ts, m_EditorCamera);

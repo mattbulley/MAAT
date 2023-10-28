@@ -4,8 +4,8 @@
 [submodule "MAAT/vendor/imgui"]
 	path = MAAT/vendor/imgui
 	url = https://github.com/TheCherno/imgui/tree/docking
-[submodule "MAAT/Vendor/yaml-cpp"]
-	path = MAAT/Vendor/yaml-cpp
+[submodule "MAAT/vendor/yaml-cpp"]
+	path = MAAT/vendor/yaml-cpp
 	url = https://github.com/thecherno/yaml-cpp
 [submodule "MAAT/vendor/ImGuizmo"]
 	path = MAAT/vendor/ImGuizmo
