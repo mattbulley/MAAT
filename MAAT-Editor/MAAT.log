@@ -1,10 +1,10 @@
-[14:28:09] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[14:28:09] [info] MAAT: OpenGL Info:
-[14:28:09] [info] MAAT:   Vendor: ATI Technologies Inc.
-[14:28:09] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[14:28:09] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[14:28:18] [trace] MAAT: Deserializing scene 'Untitled'
-[14:28:18] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
-[14:28:18] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[14:28:18] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
-[14:28:18] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left
+[15:10:20] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[15:10:21] [info] MAAT: OpenGL Info:
+[15:10:21] [info] MAAT:   Vendor: ATI Technologies Inc.
+[15:10:21] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[15:10:21] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[15:10:25] [trace] MAAT: Deserializing scene 'Untitled'
+[15:10:25] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
+[15:10:25] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
+[15:10:25] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
+[15:10:25] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left
