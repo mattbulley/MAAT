@@ -2,6 +2,7 @@
 
 #include "MAAT.h"
 #include "Panels/SceneHierarchyPanel.h"
+#include "Panels/ContentBrowserPanel.h"
 
 #include "MAAT/Renderer/EditorCamera.h"
 
@@ -57,6 +58,7 @@ namespace MAAT {
 
 		// Panels
 		SceneHierarchyPanel m_SceneHierarchyPanel;
+		ContentBrowserPanel m_ContentBrowserPanel;
 	};
 
 }

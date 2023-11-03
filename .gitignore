@@ -18,6 +18,6 @@ bin-int/
 .vs/
 bin/
 bin-int/
-MAAT/vendor/VulkanSDK
+MAAT/vendor/VulkanSDK/
 MAAT-Editor/assets/cache
 scripts/__pycache__
