@@ -13,7 +13,7 @@ namespace MAAT {
 	ContentBrowserPanel::ContentBrowserPanel()
 		: m_CurrentDirectory(g_AssetPath)
 	{
-		m_DirectoryIcon = Texture2D::Create("Resources/Icons/ContentBrowser/DirectoryIcon2.png");
+		m_DirectoryIcon = Texture2D::Create("Resources/Icons/ContentBrowser/DirectoryIcon3.png");
 		m_FileIcon = Texture2D::Create("Resources/Icons/ContentBrowser/FileIcon2.png");
 	}
 

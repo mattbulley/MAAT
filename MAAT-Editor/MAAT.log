@@ -1,18 +1,18 @@
-[19:58:34] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[19:58:34] [info] MAAT: OpenGL Info:
-[19:58:34] [info] MAAT:   Vendor: ATI Technologies Inc.
-[19:58:34] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[19:58:34] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[19:58:34] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[19:58:34] [trace] MAAT:     1 uniform buffers
-[19:58:34] [trace] MAAT:     0 resources
-[19:58:34] [trace] MAAT: Uniform buffers:
-[19:58:34] [trace] MAAT:   Camera
-[19:58:34] [trace] MAAT:     Size = 64
-[19:58:34] [trace] MAAT:     Binding = 0
-[19:58:34] [trace] MAAT:     Members = 1
-[19:58:34] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[19:58:34] [trace] MAAT:     0 uniform buffers
-[19:58:34] [trace] MAAT:     1 resources
-[19:58:34] [trace] MAAT: Uniform buffers:
-[19:58:34] [warning] MAAT: Shader creation took 59.2384 ms
+[20:55:21] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[20:55:22] [info] MAAT: OpenGL Info:
+[20:55:22] [info] MAAT:   Vendor: ATI Technologies Inc.
+[20:55:22] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[20:55:22] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[20:55:22] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[20:55:22] [trace] MAAT:     1 uniform buffers
+[20:55:22] [trace] MAAT:     0 resources
+[20:55:22] [trace] MAAT: Uniform buffers:
+[20:55:22] [trace] MAAT:   Camera
+[20:55:22] [trace] MAAT:     Size = 64
+[20:55:22] [trace] MAAT:     Binding = 0
+[20:55:22] [trace] MAAT:     Members = 1
+[20:55:22] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[20:55:22] [trace] MAAT:     0 uniform buffers
+[20:55:22] [trace] MAAT:     1 resources
+[20:55:22] [trace] MAAT: Uniform buffers:
+[20:55:22] [warning] MAAT: Shader creation took 60.2356 ms
