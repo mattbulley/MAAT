@@ -2,6 +2,8 @@
 
 #include <filesystem>
 
+#include "MAAT/Renderer/Texture.h"
+
 namespace MAAT {
 
 	class ContentBrowserPanel
@@ -12,5 +14,8 @@ namespace MAAT {
 		void OnImGuiRender();
 	private:
 		std::filesystem::path m_CurrentDirectory;
+
+		Ref<Texture2D> m_DirectoryIcon;
+		Ref<Texture2D> m_FileIcon;
 	};
 }

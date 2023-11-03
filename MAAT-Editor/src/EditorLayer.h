@@ -26,6 +26,7 @@ namespace MAAT {
 
 		void NewScene();
 		void OpenScene();
+		void OpenScene(const std::filesystem::path& path);
 		void SaveSceneAs();
 	private:
 		MAAT::OrthographicCameraController m_CameraController;
