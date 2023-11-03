@@ -1,5 +1,5 @@
 #include "mtpch.h"
-#include "OpenGLFramebuffer.h"
+#include "Platform/OpenGL/OpenGLFramebuffer.h"
 
 #include <glad/glad.h>
 
@@ -84,7 +84,7 @@ namespace MAAT {
 				case FramebufferTextureFormat::RED_INTEGER:     return GL_RED_INTEGER;
 			}
 
-			MAAT_CORE_ASSERT(false, "");
+			MAAT_CORE_ASSERT(false);
 			return 0;
 		}
 	}
@@ -97,7 +97,7 @@ namespace MAAT {
 			if (!Utils::IsDepthFormat(spec.TextureFormat))
 				m_ColorAttachmentSpecifications.emplace_back(spec);
 			else
-				m_DepthAttachmentSpecification = spec.TextureFormat;
+				m_DepthAttachmentSpecification = spec;
 		}
 
 		Invalidate();
@@ -122,11 +122,12 @@ namespace MAAT {
 			m_DepthAttachment = 0;
 		}
 
-		bool multisample = m_Specification.Samples > 1;
-
 		glCreateFramebuffers(1, &m_RendererID);
 		glBindFramebuffer(GL_FRAMEBUFFER, m_RendererID);
 
+		bool multisample = m_Specification.Samples > 1;
+
+		// Attachments
 		if (m_ColorAttachmentSpecifications.size())
 		{
 			m_ColorAttachments.resize(m_ColorAttachmentSpecifications.size());
@@ -137,12 +138,12 @@ namespace MAAT {
 				Utils::BindTexture(multisample, m_ColorAttachments[i]);
 				switch (m_ColorAttachmentSpecifications[i].TextureFormat)
 				{
-				case FramebufferTextureFormat::RGBA8:
-					Utils::AttachColorTexture(m_ColorAttachments[i], m_Specification.Samples, GL_RGBA8, GL_RGBA, m_Specification.Width, m_Specification.Height, i);
-					break;
-				case FramebufferTextureFormat::RED_INTEGER:
-					Utils::AttachColorTexture(m_ColorAttachments[i], m_Specification.Samples, GL_R32I, GL_RED_INTEGER, m_Specification.Width, m_Specification.Height, i);
-					break;
+					case FramebufferTextureFormat::RGBA8:
+						Utils::AttachColorTexture(m_ColorAttachments[i],	m_Specification.Samples, GL_RGBA8, GL_RGBA,	   m_Specification.Width, m_Specification.Height, i);
+						break;
+					case FramebufferTextureFormat::RED_INTEGER:
+						Utils::AttachColorTexture(m_ColorAttachments[i],	m_Specification.Samples, GL_R32I, GL_RED_INTEGER,  m_Specification.Width, m_Specification.Height, i);
+						break;
 				}
 			}
 		}
@@ -153,15 +154,15 @@ namespace MAAT {
 			Utils::BindTexture(multisample, m_DepthAttachment);
 			switch (m_DepthAttachmentSpecification.TextureFormat)
 			{
-			case FramebufferTextureFormat::DEPTH24STENCIL8:
-					Utils::AttachDepthTexture(m_DepthAttachment, m_Specification.Samples, GL_DEPTH24_STENCIL8, GL_DEPTH_STENCIL_ATTACHMENT, m_Specification.Width, m_Specification.Height);
-					break;
+				case FramebufferTextureFormat::DEPTH24STENCIL8:
+						Utils::AttachDepthTexture(m_DepthAttachment,	m_Specification.Samples, GL_DEPTH24_STENCIL8,  GL_DEPTH_STENCIL_ATTACHMENT, m_Specification.Width,	 m_Specification.Height);
+						break;
 			}
 		}
 
 		if (m_ColorAttachments.size() > 1)
 		{
-			MAAT_CORE_ASSERT(m_ColorAttachments.size() <= 4, "");
+			MAAT_CORE_ASSERT(m_ColorAttachments.size() <= 4);
 			GLenum buffers[4] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2, GL_COLOR_ATTACHMENT3 };
 			glDrawBuffers(m_ColorAttachments.size(), buffers);
 		}
@@ -192,6 +193,7 @@ namespace MAAT {
 		if (width == 0 || height == 0 || width > MaxFramebufferSize || height > MaxFramebufferSize)
 		{
 			MAAT_CORE_WARN("Attempted to resize framebuffer to {0}, {1}", width, height);
+			return;
 		}
 
 		m_Specification.Width = width;
@@ -202,7 +204,7 @@ namespace MAAT {
 
 	int OpenGLFramebuffer::ReadPixel(uint32_t attachmentIndex, int x, int y)
 	{
-		MAAT_CORE_ASSERT(attachmentIndex < m_ColorAttachments.size(), "");
+		MAAT_CORE_ASSERT(attachmentIndex < m_ColorAttachments.size());
 
 		glReadBuffer(GL_COLOR_ATTACHMENT0 + attachmentIndex);
 		int pixelData;
@@ -212,7 +214,7 @@ namespace MAAT {
 
 	void OpenGLFramebuffer::ClearAttachment(uint32_t attachmentIndex, int value)
 	{
-		MAAT_CORE_ASSERT(attachmentIndex < m_ColorAttachments.size(), "");
+		MAAT_CORE_ASSERT(attachmentIndex < m_ColorAttachments.size());
 
 		auto& spec = m_ColorAttachmentSpecifications[attachmentIndex];
 

@@ -7,6 +7,7 @@
 #include "MAAT/Core/Application.h"
 #include "MAAT/Core/Layer.h"
 #include "MAAT/Core/Log.h"
+#include "MAAT/Core/Assert.h"
 
 #include "MAAT/Core/Timestep.h"
 
@@ -31,7 +32,7 @@
 #include "MAAT/Renderer/Shader.h"
 #include "MAAT/Renderer/Framebuffer.h"
 #include "MAAT/Renderer/Texture.h"
-#include "MAAT/Renderer/SubTexture2D.h"
+//#include "MAAT/Renderer/SubTexture2D.h"
 #include "MAAT/Renderer/VertexArray.h"
 
 #include "MAAT/Renderer/OrthographicCamera.h"

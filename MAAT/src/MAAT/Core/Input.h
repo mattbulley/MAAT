@@ -1,6 +1,7 @@
 #pragma once
 
-#include "MAAT/Core/Core.h"
+#include <glm/glm.hpp>
+
 #include "MAAT/Core/KeyCodes.h"
 #include "MAAT/Core/MouseCodes.h"
 
@@ -12,10 +13,8 @@ namespace MAAT {
 		static bool IsKeyPressed(KeyCode key);
 
 		static bool IsMouseButtonPressed(MouseCode button);
-		static std::pair<float, float> GetMousePosition();
+		static glm::vec2 GetMousePosition();
 		static float GetMouseX();
 		static float GetMouseY();
-	/*private:
-		static Scope<Input> s_Instance;*/
 	};
 }

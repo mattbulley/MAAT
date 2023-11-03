@@ -51,6 +51,7 @@ namespace MAAT {
 	{
 		return 0.8f;
 	}
+
 	float EditorCamera::ZoomSpeed() const
 	{
 		float distance = m_Distance * 0.2f;

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "MAAT/Core/Core.h"
-#include "MAAT/Core/Log.h"
 #include "MAAT/Scene/Scene.h"
 #include "MAAT/Scene/Entity.h"
 

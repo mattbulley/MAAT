@@ -2,8 +2,11 @@
 
 #include "MAAT/Core/Core.h"
 
+// This ignores all warnings raised inside External headers
+#pragma warning(push, 0)
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
+#pragma warning(pop)
 
 namespace MAAT {
 
@@ -12,8 +15,8 @@ namespace MAAT {
 	public:
 		static void Init();
 
-		inline static Ref<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
-		inline static Ref<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
+		static Ref<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
+		static Ref<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
 	private:
 		static Ref<spdlog::logger> s_CoreLogger;
 		static Ref<spdlog::logger> s_ClientLogger;

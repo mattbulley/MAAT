@@ -1,7 +1,7 @@
 #pragma once
 
 #include "MAAT/Events/Event.h"
-#include "MAAT/Core/Input.h"
+#include "MAAT/Core/MouseCodes.h"
 
 namespace MAAT {
 
@@ -11,8 +11,8 @@ namespace MAAT {
 		MouseMovedEvent(float x, float y)
 			: m_MouseX(x), m_MouseY(y) {}
 
-		inline float GetX() const { return m_MouseX; }
-		inline float GetY() const { return m_MouseY; }
+		float GetX() const { return m_MouseX; }
+		float GetY() const { return m_MouseY; }
 
 		std::string ToString() const override
 		{
@@ -33,8 +33,8 @@ namespace MAAT {
 		MouseScrolledEvent(float xOffset, float yOffset)
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
 
-		inline float GetXOffset() const { return m_XOffset; }
-		inline float GetYOffset() const { return m_YOffset; }
+		float GetXOffset() const { return m_XOffset; }
+		float GetYOffset() const { return m_YOffset; }
 
 		std::string ToString() const override
 		{
@@ -54,7 +54,7 @@ namespace MAAT {
 	public:
 		inline MouseCode GetMouseButton() const { return m_Button; }
 
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput | EventCategoryMouseButton)
 	protected:
 		MouseButtonEvent(MouseCode button)
 			: m_Button(button) {}
@@ -65,7 +65,7 @@ namespace MAAT {
 	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonPressedEvent(MouseCode button)
+		MouseButtonPressedEvent(const MouseCode button)
 			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
@@ -81,7 +81,7 @@ namespace MAAT {
 	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonReleasedEvent(MouseCode button)
+		MouseButtonReleasedEvent(const MouseCode button)
 			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override

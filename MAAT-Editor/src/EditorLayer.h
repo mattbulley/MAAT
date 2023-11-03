@@ -27,7 +27,7 @@ namespace MAAT {
 		void OpenScene();
 		void SaveSceneAs();
 	private:
-		OrthographicCameraController m_CameraController;
+		MAAT::OrthographicCameraController m_CameraController;
 
 		// Temp
 		Ref<VertexArray> m_SquareVA;

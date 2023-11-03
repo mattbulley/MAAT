@@ -8,10 +8,9 @@ namespace MAAT {
 	class MAATEditor : public Application
 	{
 	public:
-		MAATEditor()
+		MAATEditor(ApplicationCommandLineArgs args)
 			: Application("MAAT Editor")
 		{
-			// PushLayer(new ExampleLayer());
 			PushLayer(new EditorLayer());
 		}
 
@@ -20,9 +19,9 @@ namespace MAAT {
 		}
 	};
 
-	Application* CreateApplication()
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new MAATEditor();
+		return new MAATEditor(args);
 	}
 
 }

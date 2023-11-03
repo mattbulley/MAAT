@@ -22,7 +22,6 @@ namespace MAAT {
 		static void BeginScene(const EditorCamera& camera);
 		static void BeginScene(const OrthographicCamera& camera); // TODO: Remove
 		static void EndScene();
-		static void StartBatch();
 		static void Flush();
 
 		// Primitives
@@ -59,6 +58,7 @@ namespace MAAT {
 		static void ResetStats();
 		static Statistics GetStats();
 	private:
+		static void StartBatch();
 		static void NextBatch();
 	};
 }

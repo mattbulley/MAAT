@@ -7,7 +7,7 @@
 
 #include "MAAT/Core/Application.h"
 
-#include <glm/glm.hpp>
+//#include <glm/glm.hpp>
 
 // TEMPORARY
 #include <GLFW/glfw3.h>

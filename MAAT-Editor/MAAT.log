@@ -1,10 +1,23 @@
-[17:07:03] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[17:07:03] [info] MAAT: OpenGL Info:
-[17:07:03] [info] MAAT:   Vendor: ATI Technologies Inc.
-[17:07:03] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[17:07:03] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[17:07:09] [trace] MAAT: Deserializing scene 'Untitled'
-[17:07:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
-[17:07:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[17:07:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
-[17:07:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left
+[14:35:13] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[14:35:14] [info] MAAT: OpenGL Info:
+[14:35:14] [info] MAAT:   Vendor: ATI Technologies Inc.
+[14:35:14] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[14:35:14] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[14:35:14] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[14:35:14] [trace] MAAT:     1 uniform buffers
+[14:35:14] [trace] MAAT:     0 resources
+[14:35:14] [trace] MAAT: Uniform buffers:
+[14:35:14] [trace] MAAT:   Camera
+[14:35:14] [trace] MAAT:     Size = 64
+[14:35:14] [trace] MAAT:     Binding = 0
+[14:35:14] [trace] MAAT:     Members = 1
+[14:35:14] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[14:35:14] [trace] MAAT:     0 uniform buffers
+[14:35:14] [trace] MAAT:     1 resources
+[14:35:14] [trace] MAAT: Uniform buffers:
+[14:35:14] [warning] MAAT: Shader creation took 93.0896 ms
+[14:35:24] [trace] MAAT: Deserializing scene 'Untitled'
+[14:35:24] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
+[14:35:24] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
+[14:35:24] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
+[14:35:24] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left

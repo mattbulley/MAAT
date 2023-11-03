@@ -6,6 +6,14 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "MAAT/Scene/Components.h"
+#include <cstring>
+
+/* The Microsoft C++ compiler is non-compliant with the C++ standard and needs
+ * the following definition to disable a security warning on std::strncpy().
+ */
+#ifdef _MSVC_LANG
+	#define _CRT_SECURE_NO_WARNINGS
+#endif
 
 namespace MAAT {
 
@@ -167,7 +175,7 @@ namespace MAAT {
 		ImGui::SameLine();
 		ImGui::DragFloat("##Z", &values.z, 0.1f, 0.0f, 0.0f, "%.2f");
 		ImGui::PopItemWidth();
-		ImGui::SameLine();
+		//ImGui::SameLine();
 		
 		ImGui::PopStyleVar();
 
@@ -224,8 +232,7 @@ namespace MAAT {
 
 			char buffer[256];
 			memset(buffer, 0, sizeof(buffer));
-			strcpy_s(buffer, sizeof(buffer), tag.c_str());
-
+			std::strncpy(buffer, tag.c_str(), sizeof(buffer));
 			if (ImGui::InputText("##Tag", buffer, sizeof(buffer)))
 			{
 				tag = std::string(buffer);
@@ -242,13 +249,19 @@ namespace MAAT {
 		{
 			if (ImGui::MenuItem("Camera"))
 			{
-				m_SelectionContext.AddComponent<CameraComponent>();
+				if (!m_SelectionContext.HasComponent<CameraComponent>())
+					m_SelectionContext.AddComponent<CameraComponent>();
+				else
+					MAAT_CORE_WARN("This entity already has the Camera Component!");
 				ImGui::CloseCurrentPopup();
 			}
 
 			if (ImGui::MenuItem("Sprite Renderer"))
 			{
-				m_SelectionContext.AddComponent<SpriteRendererComponent>();
+				if (!m_SelectionContext.HasComponent<SpriteRendererComponent>())
+					m_SelectionContext.AddComponent<SpriteRendererComponent>();
+				else
+					MAAT_CORE_WARN("This entity already has the Sprite Renderer Component!");
 				ImGui::CloseCurrentPopup();
 			}
 
@@ -278,7 +291,7 @@ namespace MAAT {
 			{
 				for (int i = 0; i < 2; i++)
 				{
-					bool isSelected = currentProjectionTypeString == projectionTypeStrings[1];
+					bool isSelected = currentProjectionTypeString == projectionTypeStrings[i];
 					if (ImGui::Selectable(projectionTypeStrings[i], isSelected))
 					{
 						currentProjectionTypeString = projectionTypeStrings[i];
@@ -294,17 +307,17 @@ namespace MAAT {
 
 			if (camera.GetProjectionType() == SceneCamera::ProjectionType::Perspective)
 			{
-				float verticalFov = glm::degrees(camera.GetPerspectiveVerticalFOV());
-				if (ImGui::DragFloat("Vertical FOV", &verticalFov))
-					camera.SetPerspectiveVerticalFOV(glm::radians(verticalFov));
+				float perspectiveVerticalFov = glm::degrees(camera.GetPerspectiveVerticalFOV());
+				if (ImGui::DragFloat("Vertical FOV", &perspectiveVerticalFov))
+					camera.SetPerspectiveVerticalFOV(glm::radians(perspectiveVerticalFov));
 
-				float perspNear = camera.GetPerspectiveNearClip();
-				if (ImGui::DragFloat("Near", &perspNear))
-					camera.SetPerspectiveNearClip(perspNear);
+				float perspectiveNear = camera.GetPerspectiveNearClip();
+				if (ImGui::DragFloat("Near", &perspectiveNear))
+					camera.SetPerspectiveNearClip(perspectiveNear);
 
-				float perspFar = camera.GetPerspectiveFarClip();
-				if (ImGui::DragFloat("Far", &perspFar))
-					camera.SetPerspectiveFarClip(perspFar);
+				float perspectiveFar = camera.GetPerspectiveFarClip();
+				if (ImGui::DragFloat("Far", &perspectiveFar))
+					camera.SetPerspectiveFarClip(perspectiveFar);
 			}
 
 			if (camera.GetProjectionType() == SceneCamera::ProjectionType::Orthographic)

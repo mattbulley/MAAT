@@ -3,8 +3,9 @@
 !vendor/premake/bin/
 bin-int/
 
-# Hazel files
+# MAAT files
 *.log
+*.user
 
 # Visual Studio files and folder
 .vs/
@@ -14,6 +15,9 @@ bin-int/
 **.vcxproj.user
 
 # Directories
-Hazel/vendor/VulkanSDK
-Hazelnut/assets/cache
+.vs/
+bin/
+bin-int/
+MAAT/vendor/VulkanSDK
+MAAT-Editor/assets/cache
 scripts/__pycache__

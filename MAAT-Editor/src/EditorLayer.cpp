@@ -23,6 +23,8 @@ namespace MAAT {
 	{
 		MAAT_PROFILE_FUNCTION();
 
+		m_AlienTexture = Texture2D::Create("assets/textures/alien.png");
+
 		FramebufferSpecification fbSpec;
 		fbSpec.Attachments = { FramebufferTextureFormat::RGBA8, FramebufferTextureFormat::RED_INTEGER, FramebufferTextureFormat::Depth };
 		fbSpec.Width = 1280;
@@ -31,8 +33,15 @@ namespace MAAT {
 
 		m_ActiveScene = CreateRef<Scene>();
 
-		m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
+		auto commandLineArgs = Application::Get().GetCommandLineArgs();
+		if (commandLineArgs.Count > 1)
+		{
+			auto sceneFilePath = commandLineArgs[1];
+			SceneSerializer serializer(m_ActiveScene);
+			serializer.Deserialize(sceneFilePath);
+		}
 
+		m_EditorCamera = EditorCamera(30.0f, 1.778f, 0.1f, 1000.0f);
 #if 0
 		// Entity
 		auto square = m_ActiveScene->CreateEntity("Green Square");
@@ -116,8 +125,7 @@ namespace MAAT {
 		// Render
 		Renderer2D::ResetStats();
 		m_Framebuffer->Bind();
-		//35, 38, 40
-		//37, 37, 38
+
 		glm::vec4 clearColor1 = { 35.0f / 255.0f, 38.0f / 255.0f, 40.0f / 255.0f, 1.0f };
 		glm::vec4 clearColor2 = { 37.0f / 255.0f, 37.0f / 255.0f, 38.0f / 255.0f, 1.0f };
 		glm::vec4 clearColor3 = { 20.5f / 255.0f, 23.5f / 255.0f, 25.0f / 255.0f, 1.0f };
@@ -310,7 +318,6 @@ namespace MAAT {
 				Math::DecomposeTransform(transform, translation, rotation, scale);
 
 				glm::vec3 deltaRotation = rotation - tc.Rotation;
-				
 				tc.Translation = translation;
 				tc.Rotation += deltaRotation;
 				tc.Scale = scale;
@@ -367,17 +374,29 @@ namespace MAAT {
 
 			// Gizmos
 			case Key::Q:
-				m_GizmoType = -1;
+			{
+				if (!ImGuizmo::IsUsing())
+					m_GizmoType = -1;
 				break;
+			}
 			case Key::W:
-				m_GizmoType = ImGuizmo::OPERATION::TRANSLATE;
+			{
+				if (!ImGuizmo::IsUsing())
+					m_GizmoType = ImGuizmo::OPERATION::TRANSLATE;
 				break;
+			}
 			case Key::E:
-				m_GizmoType = ImGuizmo::OPERATION::ROTATE;
+			{
+				if (!ImGuizmo::IsUsing())
+					m_GizmoType = ImGuizmo::OPERATION::ROTATE;
 				break;
+			}
 			case Key::R:
-				m_GizmoType = ImGuizmo::OPERATION::SCALE;
+			{
+				if (!ImGuizmo::IsUsing())
+					m_GizmoType = ImGuizmo::OPERATION::SCALE;
 				break;
+			}
 		}
 	}
 

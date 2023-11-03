@@ -139,7 +139,7 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 			else
 				texture = m_TextureStairs;
 
-			MAAT::Renderer2D::DrawQuad({ x - m_MapWidth / 2.0f, m_MapHeight - y - m_MapHeight / 2.0f, 0.5f }, { 1.0f, 1.0f }, texture);
+			//MAAT::Renderer2D::DrawQuad({ x - m_MapWidth / 2.0f, m_MapHeight - y - m_MapHeight / 2.0f, 0.5f }, { 1.0f, 1.0f }, texture);
 		}
 	}
 
