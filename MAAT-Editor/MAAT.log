@@ -1,23 +1,23 @@
-[00:14:26] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[00:14:27] [info] MAAT: OpenGL Info:
-[00:14:27] [info] MAAT:   Vendor: ATI Technologies Inc.
-[00:14:27] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[00:14:27] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[00:14:27] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[00:14:27] [trace] MAAT:     1 uniform buffers
-[00:14:27] [trace] MAAT:     0 resources
-[00:14:27] [trace] MAAT: Uniform buffers:
-[00:14:27] [trace] MAAT:   Camera
-[00:14:27] [trace] MAAT:     Size = 64
-[00:14:27] [trace] MAAT:     Binding = 0
-[00:14:27] [trace] MAAT:     Members = 1
-[00:14:27] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[00:14:27] [trace] MAAT:     0 uniform buffers
-[00:14:27] [trace] MAAT:     1 resources
-[00:14:27] [trace] MAAT: Uniform buffers:
-[00:14:27] [warning] MAAT: Shader creation took 90.9679 ms
-[00:14:30] [trace] MAAT: Deserializing scene 'Untitled'
-[00:14:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
-[00:14:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[00:14:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
-[00:14:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left
+[18:03:05] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[18:03:05] [info] MAAT: OpenGL Info:
+[18:03:05] [info] MAAT:   Vendor: ATI Technologies Inc.
+[18:03:05] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[18:03:05] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[18:03:05] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[18:03:05] [trace] MAAT:     1 uniform buffers
+[18:03:05] [trace] MAAT:     0 resources
+[18:03:05] [trace] MAAT: Uniform buffers:
+[18:03:05] [trace] MAAT:   Camera
+[18:03:05] [trace] MAAT:     Size = 64
+[18:03:05] [trace] MAAT:     Binding = 0
+[18:03:05] [trace] MAAT:     Members = 1
+[18:03:05] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[18:03:05] [trace] MAAT:     0 uniform buffers
+[18:03:05] [trace] MAAT:     1 resources
+[18:03:05] [trace] MAAT: Uniform buffers:
+[18:03:05] [warning] MAAT: Shader creation took 72.8264 ms
+[18:03:08] [trace] MAAT: Deserializing scene 'Untitled'
+[18:03:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Top
+[18:03:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
+[18:03:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Right
+[18:03:08] [trace] MAAT: Deserialized entity with ID = 1234567, name = Left

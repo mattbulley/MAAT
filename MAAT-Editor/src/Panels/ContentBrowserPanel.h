@@ -17,5 +17,10 @@ namespace MAAT {
 
 		Ref<Texture2D> m_DirectoryIcon;
 		Ref<Texture2D> m_FileIcon;
+		Ref<Texture2D> m_DiscIcon1;
+		Ref<Texture2D> m_DiscIcon2;
+		Ref<Texture2D> m_DiscIcon3;
+		Ref<Texture2D> m_FontIcon;
+		Ref<Texture2D> m_SceneIcon;
 	};
 }
