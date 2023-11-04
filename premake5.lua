@@ -26,6 +26,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 group "Dependencies"
 	include "vendor/premake"
+	include "MAAT/vendor/Box2D"
 	include "MAAT/vendor/GLFW"
 	include "MAAT/vendor/Glad"
 	include "MAAT/vendor/imgui"

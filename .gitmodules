@@ -10,3 +10,6 @@
 [submodule "MAAT/vendor/ImGuizmo"]
 	path = MAAT/vendor/ImGuizmo
 	url = https://github.com/thecherno/imguizmo
+[submodule "MAAT/vendor/Box2D"]
+	path = MAAT/vendor/Box2D
+	url = https://github.com/TheCherno/box2d
