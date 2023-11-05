@@ -1,6 +1,17 @@
 Scene: Untitled
 Entities:
-  - Entity: 3403027237683779659
+  - Entity: 13431656646809134656
+    TagComponent:
+      Tag: Empty Entity
+    TransformComponent:
+      Translation: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CircleRendererComponent:
+      Color: [1, 1, 1, 1]
+      Thickness: 1
+      Fade: 0.00499999989
+  - Entity: 4023711291893241067
     TagComponent:
       Tag: Floor
     TransformComponent:
@@ -19,24 +30,6 @@ Entities:
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
-  - Entity: 16416154459661219012
-    TagComponent:
-      Tag: Camera
-    TransformComponent:
-      Translation: [0, 0, 21.1800003]
-      Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
-    CameraComponent:
-      Camera:
-        ProjectionType: 0
-        PerspectiveFOV: 0.785398185
-        PerspectiveNear: 0.00999999978
-        PerspectiveFar: 1000
-        OrthographicSize: 10
-        OrthographicNear: -1
-        OrthographicFar: 1
-      Primary: true
-      FixedAspectRatio: false
   - Entity: 17044366248198869849
     TagComponent:
       Tag: Sprite
@@ -56,22 +49,21 @@ Entities:
       Friction: 0.5
       Restitution: 0.660000026
       RestitutionThreshold: 0.5
-  - Entity: 2184514254877558300
+  - Entity: 16416154459661219012
     TagComponent:
-      Tag: Floor
+      Tag: Camera
     TransformComponent:
-      Translation: [6.91103172, -0.603883505, 0]
-      Rotation: [0, 0, 0.747581482]
-      Scale: [16.3676682, 0.999999881, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: false
-    BoxCollider2DComponent:
-      Offset: [0, 0]
-      Size: [0.5, 0.5]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
+      Translation: [0, 0, 21.1800003]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        PerspectiveFOV: 0.785398185
+        PerspectiveNear: 0.00999999978
+        PerspectiveFar: 1000
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+      FixedAspectRatio: false

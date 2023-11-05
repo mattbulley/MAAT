@@ -119,13 +119,13 @@ ExampleLayer::ExampleLayer()
 
 	m_FlatColorShader = MAAT::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
-	auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
+	auto quadShader = m_ShaderLibrary.Load("assets/shaders/Renderer2D_Quad.glsl");
 
 	m_Texture = MAAT::Texture2D::Create("assets/textures/Checkerboard.png");
 	m_ChernoLogoTexture = MAAT::Texture2D::Create("assets/textures/ChernoLogo.png");
 
-	textureShader->Bind();
-	textureShader->SetInt("u_Texture", 0);
+	quadShader->Bind();
+	quadShader->SetInt("u_Texture", 0);
 }
 
 void ExampleLayer::OnAttach()
@@ -162,12 +162,12 @@ void ExampleLayer::OnUpdate(MAAT::Timestep ts)
 		}
 	}
 
-	auto textureShader = m_ShaderLibrary.Get("Texture");
+	auto quadShader = m_ShaderLibrary.Get("Texture");
 
 	m_Texture->Bind();
-	MAAT::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+	MAAT::Renderer::Submit(quadShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 	m_ChernoLogoTexture->Bind();
-	MAAT::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+	MAAT::Renderer::Submit(quadShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 	// Triangle
 	// Hazel::Renderer::Submit(m_Shader, m_VertexArray);
