@@ -1,42 +1,22 @@
-[22:10:04] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[22:10:04] [info] MAAT: OpenGL Info:
-[22:10:04] [info] MAAT:   Vendor: ATI Technologies Inc.
-[22:10:04] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[22:10:04] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[22:10:04] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
-[22:10:04] [trace] MAAT:     1 uniform buffers
-[22:10:04] [trace] MAAT:     0 resources
-[22:10:04] [trace] MAAT: Uniform buffers:
-[22:10:04] [trace] MAAT:   Camera
-[22:10:04] [trace] MAAT:     Size = 64
-[22:10:04] [trace] MAAT:     Binding = 0
-[22:10:04] [trace] MAAT:     Members = 1
-[22:10:04] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
-[22:10:04] [trace] MAAT:     0 uniform buffers
-[22:10:04] [trace] MAAT:     1 resources
-[22:10:04] [trace] MAAT: Uniform buffers:
-[22:10:04] [warning] MAAT: Shader creation took 74.0466 ms
-[22:10:09] [trace] MAAT: Deserializing scene 'Untitled'
-[22:10:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:10:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:10:09] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
-[22:11:12] [trace] MAAT: Deserializing scene 'Untitled'
-[22:11:12] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:11:12] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:11:12] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
-[22:11:56] [trace] MAAT: Deserializing scene 'Untitled'
-[22:11:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
-[22:11:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:11:56] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:12:05] [trace] MAAT: Deserializing scene 'Untitled'
-[22:12:05] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
-[22:12:05] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:12:05] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:12:30] [trace] MAAT: Deserializing scene 'Untitled'
-[22:12:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:12:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:12:30] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
-[22:12:43] [trace] MAAT: Deserializing scene 'Untitled'
-[22:12:43] [trace] MAAT: Deserialized entity with ID = 1234567, name = Camera
-[22:12:43] [trace] MAAT: Deserialized entity with ID = 1234567, name = Sprite
-[22:12:43] [trace] MAAT: Deserialized entity with ID = 1234567, name = Floor
+[12:05:36] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[12:05:37] [info] MAAT: OpenGL Info:
+[12:05:37] [info] MAAT:   Vendor: ATI Technologies Inc.
+[12:05:37] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[12:05:37] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[12:05:37] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Texture.glsl
+[12:05:37] [trace] MAAT:     1 uniform buffers
+[12:05:37] [trace] MAAT:     0 resources
+[12:05:37] [trace] MAAT: Uniform buffers:
+[12:05:37] [trace] MAAT:   Camera
+[12:05:37] [trace] MAAT:     Size = 64
+[12:05:37] [trace] MAAT:     Binding = 0
+[12:05:37] [trace] MAAT:     Members = 1
+[12:05:37] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Texture.glsl
+[12:05:37] [trace] MAAT:     0 uniform buffers
+[12:05:37] [trace] MAAT:     1 resources
+[12:05:37] [trace] MAAT: Uniform buffers:
+[12:05:37] [warning] MAAT: Shader creation took 67.7523 ms
+[12:05:40] [trace] MAAT: Deserializing scene 'Untitled'
+[12:05:40] [trace] MAAT: Deserialized entity with ID = 16416154459661219012, name = Camera
+[12:05:40] [trace] MAAT: Deserialized entity with ID = 17044366248198869849, name = Sprite
+[12:05:40] [trace] MAAT: Deserialized entity with ID = 2184514254877558300, name = Floor

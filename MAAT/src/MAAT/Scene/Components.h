@@ -1,16 +1,25 @@
 #pragma once
 
+#include "MAAT/Scene/SceneCamera.h"
+#include "MAAT/Core/UUID.h"
+#include "MAAT/Renderer/Texture.h"
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/quaternion.hpp>
 
-#include "MAAT/Scene/SceneCamera.h"
-#include "ScriptableEntity.h"
-#include "MAAT/Renderer/Texture.h"
-
 namespace MAAT {
+
+	struct IDComponent
+	{
+		UUID ID;
+
+		IDComponent() = default;
+		IDComponent(const IDComponent&) = default;
+
+	};
 
 	struct TagComponent
 	{
@@ -64,6 +73,9 @@ namespace MAAT {
 		CameraComponent() = default;
 		CameraComponent(const CameraComponent&) = default;
 	};
+
+	// Forward declaration
+	class ScriptableEntity;
 
 	struct NativeScriptComponent
 	{

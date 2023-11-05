@@ -1,6 +1,7 @@
 #pragma once
 
 #include "MAAT/Core/Timestep.h"
+#include "MAAT/Core/UUID.h"
 #include "MAAT/Renderer/EditorCamera.h"
 
 #include "entt.hpp"
@@ -18,6 +19,7 @@ namespace MAAT {
 		~Scene();
 
 		Entity CreateEntity(const std::string& name = std::string());
+		Entity CreateEntityWithUUID(UUID uuid, const std::string& name = std::string());
 		void DestroyEntity(Entity entity);
 
 		void OnRuntimeStart();

@@ -158,6 +158,7 @@
     <ClInclude Include="src\MAAT\Core\PlatformDetection.h" />
     <ClInclude Include="src\MAAT\Core\Timer.h" />
     <ClInclude Include="src\MAAT\Core\Timestep.h" />
+    <ClInclude Include="src\MAAT\Core\UUID.h" />
     <ClInclude Include="src\MAAT\Core\Window.h" />
     <ClInclude Include="src\MAAT\Debug\Instrumentor.h" />
     <ClInclude Include="src\MAAT\Events\ApplicationEvent.h" />
@@ -623,6 +624,7 @@
     <ClCompile Include="src\MAAT\Core\Layer.cpp" />
     <ClCompile Include="src\MAAT\Core\LayerStack.cpp" />
     <ClCompile Include="src\MAAT\Core\Log.cpp" />
+    <ClCompile Include="src\MAAT\Core\UUID.cpp" />
     <ClCompile Include="src\MAAT\Core\Window.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\MAAT\ImGui\ImGuiLayer.cpp" />
