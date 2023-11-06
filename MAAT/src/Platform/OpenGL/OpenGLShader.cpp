@@ -66,8 +66,8 @@ namespace MAAT {
 		{
 			switch (stage)
 			{
-				case GL_VERTEX_SHADER:    return ".cached_opengl.vert.spv";
-				case GL_FRAGMENT_SHADER:  return ".cached_opengl.frag.spv";
+				case GL_VERTEX_SHADER:    return ".cached_opengl.vert";
+				case GL_FRAGMENT_SHADER:  return ".cached_opengl.frag";
 			}
 			MAAT_CORE_ASSERT(false);
 			return "";
@@ -77,8 +77,8 @@ namespace MAAT {
 		{
 			switch (stage)
 			{
-				case GL_VERTEX_SHADER:    return ".cached_vulkan.vert.spv";
-				case GL_FRAGMENT_SHADER:  return ".cached_vulkan.frag.spv";
+				case GL_VERTEX_SHADER:    return ".cached_vulkan.vert";
+				case GL_FRAGMENT_SHADER:  return ".cached_vulkan.frag";
 			}
 			MAAT_CORE_ASSERT(false);
 			return "";
@@ -99,7 +99,7 @@ namespace MAAT {
 		{
 			Timer timer;
 			CompileOrGetVulkanBinaries(shaderSources);
-			CompileOrGetOpenGLBinaries(shaderSources);
+			CompileOrGetOpenGLBinaries();
 			CreateProgram();
 			Compile(shaderSources);
 			MAAT_CORE_WARN("Shader creation took {0} ms", timer.ElapsedMillis());
@@ -123,7 +123,7 @@ namespace MAAT {
 		sources[GL_FRAGMENT_SHADER] = fragmentSrc;
 
 		CompileOrGetVulkanBinaries(sources);
-		CompileOrGetOpenGLBinaries(sources);
+		CompileOrGetOpenGLBinaries();
 		CreateProgram();
 	}
 
@@ -271,8 +271,8 @@ namespace MAAT {
 
 		shaderc::Compiler compiler;
 		shaderc::CompileOptions options;
-		options.SetTargetEnvironment(shaderc_target_env_vulkan, shaderc_env_version_vulkan_1_3);
-		const bool optimize = false;
+		options.SetTargetEnvironment(shaderc_target_env_vulkan, shaderc_env_version_vulkan_1_2);
+		const bool optimize = true;
 		if (optimize)
 			options.SetOptimizationLevel(shaderc_optimization_level_performance);
 
@@ -322,10 +322,9 @@ namespace MAAT {
 			Reflect(stage, data);
 	}
 
-	void OpenGLShader::CompileOrGetOpenGLBinaries(const std::unordered_map<GLenum, std::string>& shaderSources)
+	void OpenGLShader::CompileOrGetOpenGLBinaries()
 	{
 		auto& shaderData = m_OpenGLSPIRV;
-		auto& SS = shaderSources;
 
 		shaderc::Compiler compiler;
 		shaderc::CompileOptions options;
@@ -360,7 +359,7 @@ namespace MAAT {
 				m_OpenGLSourceCode[stage] = glslCompiler.compile();
 				auto& source = m_OpenGLSourceCode[stage];
 
-				shaderc::SpvCompilationResult module = compiler.CompileGlslToSpv(source, Utils::GLShaderStageToShaderC(stage), m_FilePath.c_str(), options);
+				shaderc::SpvCompilationResult module = compiler.CompileGlslToSpv(source, Utils::GLShaderStageToShaderC(stage), m_FilePath.c_str());
 				if (module.GetCompilationStatus() != shaderc_compilation_status_success)
 				{
 					MAAT_CORE_ERROR(module.GetErrorMessage());
