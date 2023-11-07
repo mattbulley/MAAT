@@ -1,51 +1,51 @@
-[10:43:04] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[10:43:05] [info] MAAT: OpenGL Info:
-[10:43:05] [info] MAAT:   Vendor: ATI Technologies Inc.
-[10:43:05] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[10:43:05] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
-[10:43:05] [trace] MAAT:     1 uniform buffers
-[10:43:05] [trace] MAAT:     0 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [trace] MAAT:   _46_48
-[10:43:05] [trace] MAAT:     Size = 64
-[10:43:05] [trace] MAAT:     Binding = 0
-[10:43:05] [trace] MAAT:     Members = 1
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
-[10:43:05] [trace] MAAT:     0 uniform buffers
-[10:43:05] [trace] MAAT:     1 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [warning] MAAT: Shader creation took 102.661 ms
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
-[10:43:05] [trace] MAAT:     1 uniform buffers
-[10:43:05] [trace] MAAT:     0 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [trace] MAAT:   _47_49
-[10:43:05] [trace] MAAT:     Size = 64
-[10:43:05] [trace] MAAT:     Binding = 0
-[10:43:05] [trace] MAAT:     Members = 1
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
-[10:43:05] [trace] MAAT:     0 uniform buffers
-[10:43:05] [trace] MAAT:     0 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [warning] MAAT: Shader creation took 28.0591 ms
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
-[10:43:05] [trace] MAAT:     1 uniform buffers
-[10:43:05] [trace] MAAT:     0 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [trace] MAAT:   _30_32
-[10:43:05] [trace] MAAT:     Size = 64
-[10:43:05] [trace] MAAT:     Binding = 0
-[10:43:05] [trace] MAAT:     Members = 1
-[10:43:05] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
-[10:43:05] [trace] MAAT:     0 uniform buffers
-[10:43:05] [trace] MAAT:     0 resources
-[10:43:05] [trace] MAAT: Uniform buffers:
-[10:43:05] [warning] MAAT: Shader creation took 28.678 ms
-[10:43:09] [trace] MAAT: Deserializing scene 'Untitled'
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 1702757346375517093, name = Floor
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 13548791651428541160, name = Floor
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 16416154459661219012, name = Camera
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 17044366248198869849, name = Sprite
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 4023711291893241067, name = Floor
-[10:43:09] [trace] MAAT: Deserialized entity with ID = 13431656646809134656, name = Circle
+[10:46:40] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[10:46:40] [info] MAAT: OpenGL Info:
+[10:46:40] [info] MAAT:   Vendor: ATI Technologies Inc.
+[10:46:40] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[10:46:40] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
+[10:46:40] [trace] MAAT:     1 uniform buffers
+[10:46:40] [trace] MAAT:     0 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [trace] MAAT:   _46_48
+[10:46:40] [trace] MAAT:     Size = 64
+[10:46:40] [trace] MAAT:     Binding = 0
+[10:46:40] [trace] MAAT:     Members = 1
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
+[10:46:40] [trace] MAAT:     0 uniform buffers
+[10:46:40] [trace] MAAT:     1 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [warning] MAAT: Shader creation took 91.1379 ms
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
+[10:46:40] [trace] MAAT:     1 uniform buffers
+[10:46:40] [trace] MAAT:     0 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [trace] MAAT:   _47_49
+[10:46:40] [trace] MAAT:     Size = 64
+[10:46:40] [trace] MAAT:     Binding = 0
+[10:46:40] [trace] MAAT:     Members = 1
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
+[10:46:40] [trace] MAAT:     0 uniform buffers
+[10:46:40] [trace] MAAT:     0 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [warning] MAAT: Shader creation took 42.87 ms
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
+[10:46:40] [trace] MAAT:     1 uniform buffers
+[10:46:40] [trace] MAAT:     0 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [trace] MAAT:   _30_32
+[10:46:40] [trace] MAAT:     Size = 64
+[10:46:40] [trace] MAAT:     Binding = 0
+[10:46:40] [trace] MAAT:     Members = 1
+[10:46:40] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
+[10:46:40] [trace] MAAT:     0 uniform buffers
+[10:46:40] [trace] MAAT:     0 resources
+[10:46:40] [trace] MAAT: Uniform buffers:
+[10:46:40] [warning] MAAT: Shader creation took 32.4559 ms
+[10:46:43] [trace] MAAT: Deserializing scene 'Untitled'
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 1702757346375517093, name = Floor
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 13548791651428541160, name = Floor
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 16416154459661219012, name = Camera
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 17044366248198869849, name = Sprite
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 4023711291893241067, name = Floor
+[10:46:43] [trace] MAAT: Deserialized entity with ID = 13431656646809134656, name = Circle
