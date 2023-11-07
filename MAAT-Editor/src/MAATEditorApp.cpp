@@ -13,10 +13,6 @@ namespace MAAT {
 		{
 			PushLayer(new EditorLayer());
 		}
-
-		~MAATEditor()
-		{
-		}
 	};
 
 	Application* CreateApplication(ApplicationCommandLineArgs args)
