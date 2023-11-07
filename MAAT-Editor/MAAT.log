@@ -1,56 +1,51 @@
-[11:41:32] [info] MAAT: Creating window MAAT Editor (1600, 900)
-[11:41:32] [info] MAAT: OpenGL Info:
-[11:41:32] [info] MAAT:   Vendor: ATI Technologies Inc.
-[11:41:32] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
-[11:41:32] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
-[11:41:32] [trace] MAAT:     1 uniform buffers
-[11:41:32] [trace] MAAT:     0 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:32] [trace] MAAT:   _46_48
-[11:41:32] [trace] MAAT:     Size = 64
-[11:41:32] [trace] MAAT:     Binding = 0
-[11:41:32] [trace] MAAT:     Members = 1
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
-[11:41:32] [trace] MAAT:     0 uniform buffers
-[11:41:32] [trace] MAAT:     1 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:32] [warning] MAAT: Shader creation took 425.215 ms
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
-[11:41:32] [trace] MAAT:     1 uniform buffers
-[11:41:32] [trace] MAAT:     0 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:32] [trace] MAAT:   _47_49
-[11:41:32] [trace] MAAT:     Size = 64
-[11:41:32] [trace] MAAT:     Binding = 0
-[11:41:32] [trace] MAAT:     Members = 1
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
-[11:41:32] [trace] MAAT:     0 uniform buffers
-[11:41:32] [trace] MAAT:     0 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:32] [warning] MAAT: Shader creation took 28.9489 ms
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
-[11:41:32] [trace] MAAT:     1 uniform buffers
-[11:41:32] [trace] MAAT:     0 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:32] [trace] MAAT:   _30_32
-[11:41:32] [trace] MAAT:     Size = 64
-[11:41:32] [trace] MAAT:     Binding = 0
-[11:41:32] [trace] MAAT:     Members = 1
-[11:41:32] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
-[11:41:32] [trace] MAAT:     0 uniform buffers
-[11:41:32] [trace] MAAT:     0 resources
-[11:41:32] [trace] MAAT: Uniform buffers:
-[11:41:33] [warning] MAAT: Shader creation took 38.7558 ms
-[11:41:35] [trace] MAAT: Deserializing scene 'Untitled'
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 1702757346375517093, name = Floor
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 13548791651428541160, name = Floor
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 16416154459661219012, name = Camera
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 17044366248198869849, name = Sprite
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 4023711291893241067, name = Floor
-[11:41:35] [trace] MAAT: Deserialized entity with ID = 13431656646809134656, name = Circle
-[11:41:38] [trace] MAAT: Deserializing scene 'Untitled'
-[11:41:38] [trace] MAAT: Deserialized entity with ID = 7071542101560989095, name = Camera B
-[11:41:38] [trace] MAAT: Deserialized entity with ID = 10788000747251312838, name = Camera A
-[11:41:38] [trace] MAAT: Deserialized entity with ID = 16071594158337161979, name = Red Square
-[11:41:38] [trace] MAAT: Deserialized entity with ID = 11282439620893018146, name = Green Square
+[11:44:16] [info] MAAT: Creating window MAAT Editor (1600, 900)
+[11:44:16] [info] MAAT: OpenGL Info:
+[11:44:16] [info] MAAT:   Vendor: ATI Technologies Inc.
+[11:44:16] [info] MAAT:   Renderer: Radeon (TM) RX 480 Graphics
+[11:44:16] [info] MAAT:   Version: 4.6.13596 Compatibility Profile/Debug Context 20.10.35.02 27.20.1034.6
+[11:44:21] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Quad.glsl
+[11:44:21] [trace] MAAT:     1 uniform buffers
+[11:44:21] [trace] MAAT:     0 resources
+[11:44:21] [trace] MAAT: Uniform buffers:
+[11:44:21] [trace] MAAT:   _46_48
+[11:44:21] [trace] MAAT:     Size = 64
+[11:44:21] [trace] MAAT:     Binding = 0
+[11:44:21] [trace] MAAT:     Members = 1
+[11:44:21] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Quad.glsl
+[11:44:21] [trace] MAAT:     0 uniform buffers
+[11:44:21] [trace] MAAT:     1 resources
+[11:44:21] [trace] MAAT: Uniform buffers:
+[11:44:24] [warning] MAAT: Shader creation took 7791.09 ms
+[11:44:27] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Circle.glsl
+[11:44:27] [trace] MAAT:     1 uniform buffers
+[11:44:27] [trace] MAAT:     0 resources
+[11:44:27] [trace] MAAT: Uniform buffers:
+[11:44:27] [trace] MAAT:   _47_49
+[11:44:27] [trace] MAAT:     Size = 64
+[11:44:27] [trace] MAAT:     Binding = 0
+[11:44:27] [trace] MAAT:     Members = 1
+[11:44:27] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Circle.glsl
+[11:44:27] [trace] MAAT:     0 uniform buffers
+[11:44:27] [trace] MAAT:     0 resources
+[11:44:27] [trace] MAAT: Uniform buffers:
+[11:44:29] [warning] MAAT: Shader creation took 5114.74 ms
+[11:44:32] [trace] MAAT: OpenGLShader::Reflect - GL_VERTEX_SHADER assets/shaders/Renderer2D_Line.glsl
+[11:44:32] [trace] MAAT:     1 uniform buffers
+[11:44:32] [trace] MAAT:     0 resources
+[11:44:32] [trace] MAAT: Uniform buffers:
+[11:44:32] [trace] MAAT:   _30_32
+[11:44:32] [trace] MAAT:     Size = 64
+[11:44:32] [trace] MAAT:     Binding = 0
+[11:44:32] [trace] MAAT:     Members = 1
+[11:44:32] [trace] MAAT: OpenGLShader::Reflect - GL_FRAGMENT_SHADER assets/shaders/Renderer2D_Line.glsl
+[11:44:32] [trace] MAAT:     0 uniform buffers
+[11:44:32] [trace] MAAT:     0 resources
+[11:44:32] [trace] MAAT: Uniform buffers:
+[11:44:34] [warning] MAAT: Shader creation took 4908.24 ms
+[11:44:41] [trace] MAAT: Deserializing scene 'Untitled'
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 1702757346375517093, name = Floor
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 13548791651428541160, name = Floor
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 16416154459661219012, name = Camera
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 17044366248198869849, name = Sprite
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 4023711291893241067, name = Floor
+[11:44:41] [trace] MAAT: Deserialized entity with ID = 13431656646809134656, name = Circle
