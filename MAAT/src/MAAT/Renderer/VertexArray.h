@@ -1,7 +1,8 @@
 #pragma once
 
-#include <memory>
 #include "MAAT/Renderer/Buffer.h"
+
+#include <memory>
 
 namespace MAAT {
 

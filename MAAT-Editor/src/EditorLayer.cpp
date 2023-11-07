@@ -1,16 +1,14 @@
 #include "EditorLayer.h"
+#include "MAAT/Scene/SceneSerializer.h"
+#include "MAAT/Utils/PlatformUtils.h"
+#include "MAAT/Math/Math.h"
+
 #include <imgui/imgui.h>
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "MAAT/Scene/SceneSerializer.h"
-
-#include "MAAT/Utils/PlatformUtils.h"
-
 #include "ImGuizmo.h"
-
-#include "MAAT/Math/Math.h"
 
 namespace MAAT {
 

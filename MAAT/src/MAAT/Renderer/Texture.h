@@ -1,8 +1,8 @@
 #pragma once
 
-#include <string>
-
 #include "MAAT/Core/Core.h"
+
+#include <string>
 
 namespace MAAT {
 

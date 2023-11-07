@@ -1,9 +1,9 @@
 #pragma once
 
-#include <glm/glm.hpp>
-
 #include "MAAT/Core/KeyCodes.h"
 #include "MAAT/Core/MouseCodes.h"
+
+#include <glm/glm.hpp>
 
 namespace MAAT {
 

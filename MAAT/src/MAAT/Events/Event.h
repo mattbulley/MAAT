@@ -1,8 +1,9 @@
 #pragma once
-#include <functional>
 
 #include "MAAT/Debug/Instrumentor.h"
 #include "MAAT/Core/Core.h"
+
+#include <functional>
 
 namespace MAAT {
 

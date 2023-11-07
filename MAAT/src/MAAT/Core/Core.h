@@ -1,8 +1,8 @@
 #pragma once
 
-#include <memory>
-
 #include "MAAT/Core/PlatformDetection.h"
+
+#include <memory>
 
 #ifdef MAAT_DEBUG
 #if defined(MAAT_PLATFORM_WINDOWS)

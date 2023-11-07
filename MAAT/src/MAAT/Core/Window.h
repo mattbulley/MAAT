@@ -1,9 +1,9 @@
 #pragma once
 
-#include <sstream>
-
 #include "MAAT/Core/Core.h"
 #include "MAAT/Events/Event.h"
+
+#include <sstream>
 
 namespace MAAT {
 

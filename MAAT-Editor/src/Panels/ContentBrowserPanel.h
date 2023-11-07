@@ -1,8 +1,8 @@
 #pragma once
 
-#include <filesystem>
-
 #include "MAAT/Renderer/Texture.h"
+
+#include <filesystem>
 
 namespace MAAT {
 
