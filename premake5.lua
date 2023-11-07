@@ -33,6 +33,15 @@ group "Dependencies"
 	include "MAAT/vendor/yaml-cpp"
 group ""
 
-include "MAAT"
-include "Sandbox"
-include "MAAT-Editor"
+group "Core"
+	include "MAAT"
+	include "MAAT-ScriptCore"
+group ""
+
+group "Tools"
+	include "MAAT-Editor"
+group ""
+
+group "Misc"
+	include "Sandbox"
+group ""

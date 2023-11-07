@@ -4,6 +4,7 @@
 #include "MAAT/Core/Log.h"
 
 #include "MAAT/Renderer/Renderer.h"
+#include "MAAT/Scripting/ScriptEngine.h"
 
 #include "MAAT/Core/Input.h"
 #include "MAAT/Utils/PlatformUtils.h"
@@ -28,6 +29,7 @@ namespace MAAT {
 		m_Window->SetEventCallback(MAAT_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
+		ScriptEngine::Init();
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -37,6 +39,7 @@ namespace MAAT {
 	{
 		MAAT_PROFILE_FUNCTION();
 
+		ScriptEngine::Shutdown();
 		Renderer::Shutdown();
 	}
 
