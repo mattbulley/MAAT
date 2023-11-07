@@ -7,7 +7,8 @@
 class Sandbox : public MAAT::Application
 {
 public:
-	Sandbox()
+	Sandbox(const MAAT::ApplicationSpecification& specification)
+		: MAAT::Application(specification)
 	{
 		// PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
@@ -18,7 +19,12 @@ public:
 	}
 };
 
-MAAT::Application* MAAT::CreateApplication()
+MAAT::Application* MAAT::CreateApplication(MAAT::ApplicationCommandLineArgs args)
 {
-	return new Sandbox();
+	ApplicationSpecification spec;
+	spec.Name = "Sandbox";
+	spec.WorkingDirectory = "../MAAT-Editor";
+	spec.CommandLineArgs = args;
+
+	return new Sandbox(spec);
 }

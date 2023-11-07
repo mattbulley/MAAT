@@ -22,15 +22,22 @@ namespace MAAT {
 
 		const char* operator[](int index) const
 		{
-			MAAT_CORE_ASSERT(index < Count, "");
+			MAAT_CORE_ASSERT(index < Count);
 			return Args[index];
 		}
+	};
+
+	struct ApplicationSpecification
+	{
+		std::string Name = "MAAT Application";
+		std::string WorkingDirectory;
+		ApplicationCommandLineArgs CommandLineArgs;
 	};
 
 	class Application
 	{
 	public:
-		Application(const std::string& name = "MAAT Engine", ApplicationCommandLineArgs args = ApplicationCommandLineArgs());
+		Application(const ApplicationSpecification& specification);
 		virtual ~Application();
 
 		void OnEvent(Event& e);
@@ -46,13 +53,13 @@ namespace MAAT {
 
 		static Application& Get() { return *s_Instance; }
 		
-		ApplicationCommandLineArgs GetCommandLineArgs() const { return m_CommandLineArgs; }
+		const ApplicationSpecification& GetSpecification() const { return m_Specification; }
 	private:
 		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 	private:
-		ApplicationCommandLineArgs m_CommandLineArgs;
+		ApplicationSpecification m_Specification;
 		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;

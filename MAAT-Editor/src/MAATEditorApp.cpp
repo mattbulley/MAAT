@@ -8,8 +8,8 @@ namespace MAAT {
 	class MAATEditor : public Application
 	{
 	public:
-		MAATEditor(ApplicationCommandLineArgs args)
-			: Application("MAAT Editor")
+		MAATEditor(ApplicationSpecification& spec)
+			: Application(spec)
 		{
 			PushLayer(new EditorLayer());
 		}
@@ -21,7 +21,10 @@ namespace MAAT {
 
 	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new MAATEditor(args);
-	}
+		ApplicationSpecification spec;
+		spec.Name = "MAAT Editor";
+		spec.CommandLineArgs = args;
 
+		return new MAATEditor(spec);
+	}
 }
