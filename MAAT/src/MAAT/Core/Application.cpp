@@ -7,7 +7,7 @@
 
 #include "MAAT/Core/Input.h"
 
-#include <glfw/glfw3.h>
+#include "MAAT/Utils/PlatformUtils.h"
 
 namespace MAAT {
 
@@ -81,7 +81,7 @@ namespace MAAT {
 		{
 			MAAT_PROFILE_SCOPE("RunLoop");
 
-			float time = (float)glfwGetTime();
+			float time = Time::GetTime();
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 
