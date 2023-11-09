@@ -9,6 +9,7 @@ Entities:
       Scale: [16.3676834, 0.999999881, 1]
     SpriteRendererComponent:
       Color: [1, 0.816654444, 0.030888021, 1]
+      TilingFactor: 1
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -28,6 +29,7 @@ Entities:
       Scale: [16.3676853, 1, 1]
     SpriteRendererComponent:
       Color: [1, 0.816654444, 0.030888021, 1]
+      TilingFactor: 1
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -60,11 +62,14 @@ Entities:
     TagComponent:
       Tag: Sprite
     TransformComponent:
-      Translation: [0.0110721439, 6.11000013, 0]
+      Translation: [-0.00743080676, 6.13091373, 0]
       Rotation: [0, 0, -0.846484661]
       Scale: [1, 1, 1]
+    ScriptComponent:
+      ClassName: Sandbox.Player
     SpriteRendererComponent:
       Color: [0.404466242, 0.674603581, 0.918918908, 1]
+      TilingFactor: 1
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -84,6 +89,7 @@ Entities:
       Scale: [16.3676872, 0.999999881, 1]
     SpriteRendererComponent:
       Color: [1, 0.816654444, 0.030888021, 1]
+      TilingFactor: 1
     Rigidbody2DComponent:
       BodyType: Static
       FixedRotation: false
@@ -98,7 +104,7 @@ Entities:
     TagComponent:
       Tag: Circle
     TransformComponent:
-      Translation: [-0.0495438576, 0.0495240688, 0]
+      Translation: [-0.049543865, 0.0495240688, 0]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
     CircleRendererComponent:
