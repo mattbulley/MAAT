@@ -3,8 +3,8 @@ project "MAAT-ScriptCore"
 	language "C#"
 	dotnetframework "4.7.2"
 
-	targetdir ("%{wks.location}/MAAT-Editor/Resources/Scripts")
-	objdir ("%{wks.location}/MAAT-Editor/Resources/Scripts/Intermediates")
+	targetdir ("../MAAT-Editor/Resources/Scripts")
+	objdir ("../MAAT-Editor/Resources/Scripts/Intermediates")
 
 	files
 	{
