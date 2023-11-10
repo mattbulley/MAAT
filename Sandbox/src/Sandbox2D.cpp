@@ -106,7 +106,7 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 	}
 
 #endif
-
+	/*
 	if (MAAT::Input::IsMouseButtonPressed(MAAT_MOUSE_BUTTON_LEFT))
 	{
 		auto [x, y] = MAAT::Input::GetMousePosition();
@@ -122,6 +122,7 @@ void Sandbox2D::OnUpdate(MAAT::Timestep ts)
 			m_ParticleSystem.Emit(m_Particle);
 		
 	}
+	*/
 
 	m_ParticleSystem.OnUpdate(ts);
 	m_ParticleSystem.OnRender(m_CameraController.GetCamera());
