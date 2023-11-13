@@ -131,6 +131,8 @@ namespace MAAT {
 
 	void Scene::OnRuntimeStart()
 	{
+		m_IsRunning = true;
+
 		OnPhysics2DStart();
 
 		// Scripting
@@ -149,7 +151,9 @@ namespace MAAT {
 
 	void Scene::OnRuntimeStop()
 	{
-		void OnPhysics2DStop();
+		m_IsRunning = false;
+
+		OnPhysics2DStop();
 
 		ScriptEngine::OnRuntimeStop();
 	}
