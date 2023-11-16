@@ -2,6 +2,7 @@
 #include "MAAT/Scene/SceneSerializer.h"
 #include "MAAT/Utils/PlatformUtils.h"
 #include "MAAT/Math/Math.h"
+#include "MAAT/Scripting/ScriptEngine.h"
 
 #include <imgui/imgui.h>
 
@@ -206,10 +207,20 @@ namespace MAAT {
 				if (ImGui::MenuItem("Save As...", "Ctrl+Shift+S"))
 					SaveSceneAs();
 				
-				if (ImGui::MenuItem("Exit")) Application::Get().Close();
+				if (ImGui::MenuItem("Exit"))
+					Application::Get().Close();
+				
 				ImGui::EndMenu();
 			}
 	
+			if (ImGui::BeginMenu("Script"))
+			{
+				if (ImGui::MenuItem("Reload assembly", "Ctrl+R"))
+					ScriptEngine::ReloadAssembly();
+
+				ImGui::EndMenu();
+			}
+
 			ImGui::EndMenuBar();
 		}
 
@@ -445,8 +456,15 @@ namespace MAAT {
 			}
 			case Key::R:
 			{
-				if (!ImGuizmo::IsUsing())
-					m_GizmoType = ImGuizmo::OPERATION::SCALE;
+				if (control)
+				{
+					ScriptEngine::ReloadAssembly();
+				}
+				else
+				{
+					if (!ImGuizmo::IsUsing())
+						m_GizmoType = ImGuizmo::OPERATION::SCALE;
+				}
 				break;
 			}
 		}
