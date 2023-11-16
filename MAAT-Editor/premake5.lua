@@ -18,8 +18,9 @@ project "MAAT-Editor"
 		"%{wks.location}/MAAT/vendor/spdlog/include",
 		"%{wks.location}/MAAT/src",
 		"%{wks.location}/MAAT/vendor",
-		"%{IncludeDir.glm}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.filewatch}",
+		"%{IncludeDir.glm}",
 		"%{IncludeDir.ImGuizmo}"
 	}
 
