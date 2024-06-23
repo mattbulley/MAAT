@@ -1,11 +1,15 @@
-# MAAT
+# MAAT GAME ENGINE
 
 ![MAAT](/Resources/Branding/collision.gif?raw=true "collision")
 
 ## Welcome to my C++ Engine project!
 
-### Below is documented the development process of building a 2D game engine from scratch
-### Please feel free to peruse
+### Below is documented the development process of building my 2D game engine from scratch
+### Also below is the initial character concept artwork for my Tarot themed fighting game
+### Thanks for taking a look
+### Matt Bulley
+##
+![MAAT](/Resources/Branding/characters.png?raw=true)
 ##
 ## Window Events
 ![MAAT](/Resources/Branding/windowEvents.gif?raw=true)
