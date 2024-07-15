@@ -5,7 +5,7 @@
 ## Welcome to my C++ Engine project!
 
 ### Below is documented the development process of building my 2D game engine from scratch
-### Also below is the initial character concept artwork for my Tarot themed fighting game
+### Also below is the initial character concept artwork for my tarot themed 2D fighting game/metroidvania
 ### Thanks for taking a look
 ### Matt Bulley
 ##
