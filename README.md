@@ -5,11 +5,22 @@
 ## Welcome to my C++ Engine project!
 
 ### Below is documented the development process of building my 2D game engine from scratch
-### Also below is the initial character concept artwork for my tarot themed 2D fighting game/metroidvania
+### Also below is the initial character concept artwork for my tarot themed 2D fighting game/metroidvania as well as some early designs for optional bosses that function as an on-rails shooter
 ### Thanks for taking a look
 ### Matt Bulley
 ##
 ![MAAT](/Resources/Branding/characters.png?raw=true)
+##
+![MAAT](/Resources/Branding/Scan_1.jpeg?raw=true)
+##
+![MAAT](/Resources/Branding/Scan_2.jpeg?raw=true)
+##
+![MAAT](/Resources/Branding/Scan_3.jpeg?raw=true)
+##
+![MAAT](/Resources/Branding/Scan_4.jpeg?raw=true)
+##
+![MAAT](/Resources/Branding/Scan_5.jpeg?raw=true)
+##
 ##
 ## Window Events
 ![MAAT](/Resources/Branding/windowEvents.gif?raw=true)
@@ -45,7 +56,7 @@
 ##
 ## Texture
 ![MAAT](/Resources/Branding/texture.png?raw=true)
-### Added the abiliity to apply textures as sprites
+## Added the abiliity to apply textures as sprites
 ##
 ## Camera Controller
 ![MAAT](/Resources/Branding/cameraController.gif?raw=true)
